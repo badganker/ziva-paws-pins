@@ -6,55 +6,55 @@
 <title>Husband &amp; Wife Construction</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* ============ Design tokens ============
-   basalt  – Oʻahu lava rock, primary ink / dark surfaces
-   oak     – the plank samples on the container wall
-   rust    – the shipping-container wall in the storefront photo (CTA only)
-   reef    – Honolulu sky, links & "in stock" state
-   concrete– cool grey ground, slightly green-biased
+   linen   – warm page ground, like sunlit plaster
+   espresso– warm dark brown for text and dark sections
+   oak     – the plank samples on the showroom wall
+   ember   – Hawaiʻi sunset orange, CTA only
+   sage    – calm green for trust / in-stock states
 */
 :root{
   color-scheme: light;
-  --ground:#EEF0EC;
-  --surface:#FFFFFF;
-  --surface-2:#E3E6E0;
-  --ink:#1F2120;
-  --ink-2:#4C524E;
-  --ink-3:#7A817C;
-  --line:#CDD2CB;
-  --basalt:#1F2120;
-  --on-basalt:#EEF0EC;
-  --oak:#C8A06A;
-  --rust:#B8472C;
+  --ground:#F8F3EC;
+  --surface:#FFFDF9;
+  --surface-2:#F0E7DB;
+  --ink:#2E2520;
+  --ink-2:#5C5049;
+  --ink-3:#8C7F76;
+  --line:#E6DACB;
+  --basalt:#3A2D25;
+  --on-basalt:#F8F0E6;
+  --oak:#E2B97F;
+  --rust:#CF6A34;
   --rust-ink:#FFFFFF;
-  --reef:#1F6FA8;
-  --ok:#2E7D4F;
-  --shadow:0 1px 2px rgba(20,24,22,.06),0 8px 24px rgba(20,24,22,.08);
-  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --reef:#2F7A8A;
+  --ok:#4F7D55;
+  --shadow:0 1px 2px rgba(58,45,37,.06),0 10px 30px rgba(58,45,37,.09);
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
   --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  --r:6px;
+  --r:10px;
   --max:1180px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme: dark;
-    --ground:#151716;--surface:#1D201F;--surface-2:#262A28;
-    --ink:#E9ECE8;--ink-2:#B3BAB5;--ink-3:#838B86;--line:#333836;
-    --basalt:#0E0F0F;--on-basalt:#E9ECE8;
-    --oak:#D6B07C;--rust:#D2583A;--reef:#5EA6DA;--ok:#5BBE84;
-    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+    --ground:#1C1714;--surface:#251F1B;--surface-2:#2F2722;
+    --ink:#F3EAE0;--ink-2:#C9BBAE;--ink-3:#9A8C80;--line:#3B322C;
+    --basalt:#2A211C;--on-basalt:#F3EAE0;
+    --oak:#E6C08A;--rust:#E07F48;--reef:#6BB3C2;--ok:#86B98B;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
   }
 }
 :root[data-theme="dark"]{
   color-scheme: dark;
-  --ground:#151716;--surface:#1D201F;--surface-2:#262A28;
-  --ink:#E9ECE8;--ink-2:#B3BAB5;--ink-3:#838B86;--line:#333836;
-  --basalt:#0E0F0F;--on-basalt:#E9ECE8;
-  --oak:#D6B07C;--rust:#D2583A;--reef:#5EA6DA;--ok:#5BBE84;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  --ground:#1C1714;--surface:#251F1B;--surface-2:#2F2722;
+  --ink:#F3EAE0;--ink-2:#C9BBAE;--ink-3:#9A8C80;--line:#3B322C;
+  --basalt:#2A211C;--on-basalt:#F3EAE0;
+  --oak:#E6C08A;--rust:#E07F48;--reef:#6BB3C2;--ok:#86B98B;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
 }
 
 *{box-sizing:border-box}
@@ -64,8 +64,8 @@ body{margin:0;background:var(--ground);color:var(--ink);font:400 16px/1.6 var(--
 img{max-width:100%}
 a{color:var(--reef)}
 :focus-visible{outline:2px solid var(--reef);outline-offset:3px;border-radius:3px}
-h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;letter-spacing:.005em;text-wrap:balance;margin:0;text-transform:uppercase}
-h2{font-size:clamp(2.2rem,4.6vw,3.6rem)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
 h3{font-size:1.6rem}
 p{margin:0}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
@@ -74,7 +74,7 @@ p{margin:0}
 section{padding-block:clamp(56px,8vw,104px)}
 .sec-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px)}
 
-.btn{display:inline-flex;align-items:center;gap:.5em;font:600 .95rem/1 var(--body);padding:.95em 1.3em;border-radius:var(--r);border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:600 .95rem/1 var(--body);padding:.95em 1.4em;border-radius:99px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn-rust{background:var(--rust);color:var(--rust-ink)}
 .btn-line{border-color:currentColor;color:inherit;background:transparent}
@@ -83,13 +83,13 @@ section{padding-block:clamp(56px,8vw,104px)}
 /* ============ Top strip + nav ============ */
 .strip{background:var(--basalt);color:var(--on-basalt);font:500 .78rem/1 var(--mono);letter-spacing:.04em}
 .strip .wrap{display:flex;gap:18px;justify-content:space-between;align-items:center;padding-block:10px;flex-wrap:wrap}
-.strip .open{color:#7FD3A0}
+.strip .open{color:#A9D9A6}
 .strip .open::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-right:7px;vertical-align:1px}
 header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:24px;padding-block:14px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.mark{width:42px;height:42px;border-radius:4px;background:var(--basalt);color:var(--oak);display:grid;place-items:center;font:900 1.2rem/1 var(--display);letter-spacing:-.02em}
-.logo b{font:800 1.25rem/1 var(--display);text-transform:uppercase;display:block}
+.mark{width:42px;height:42px;border-radius:12px;background:var(--rust);color:#fff;display:grid;place-items:center;font:800 1.05rem/1 var(--display);letter-spacing:-.03em}
+.logo b{font:700 1.2rem/1.05 var(--display);letter-spacing:-.02em;display:block}
 .logo small{font:500 .66rem/1 var(--mono);letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
 .nav ul{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
 .nav ul a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
@@ -101,21 +101,21 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .hero{padding-block:clamp(40px,6vw,72px) clamp(48px,7vw,88px)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
 @media (max-width:880px){.hero .wrap{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(3rem,7.4vw,6.2rem);font-weight:900;line-height:.9}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.5rem);font-weight:800;line-height:.98;letter-spacing:-.03em}
 .hero h1 em{font-style:normal;color:var(--rust)}
 .hero .lede{margin-top:22px}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
 .facts div{font:500 .82rem/1.3 var(--mono);color:var(--ink-2)}
-.facts strong{display:block;font:800 1.6rem/1 var(--display);color:var(--ink);margin-bottom:4px}
+.facts strong{display:block;font:700 1.6rem/1 var(--display);color:var(--ink);margin-bottom:4px}
 
 /* The container wall: rust corrugation with hanging plank samples */
-.wall{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:5/4;max-width:100%;
+.wall{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:5/4;max-width:100%;
   background:
     repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 3px,rgba(255,255,255,.07) 3px 9px,rgba(0,0,0,.1) 9px 22px),
-    linear-gradient(180deg,#9E3C22,#7E2E1A 70%,#5B2213);
+    linear-gradient(180deg,#B0532C,#8E3F21 70%,#6A2E18);
   box-shadow:var(--shadow);padding:9% 6% 0;display:flex;flex-direction:column}
-.banner{align-self:center;background:#F4EFE6;color:#B3261E;font:800 clamp(.95rem,2.4vw,1.5rem)/1.05 var(--display);text-transform:uppercase;letter-spacing:.06em;padding:.55em 1.1em;transform:rotate(-2deg);box-shadow:0 6px 14px rgba(0,0,0,.3);text-align:center}
+.banner{align-self:center;background:#FFF8EE;color:#B6452A;font:800 clamp(.95rem,2.4vw,1.5rem)/1.05 var(--display);text-transform:uppercase;letter-spacing:.04em;border-radius:4px;padding:.55em 1.1em;transform:rotate(-2deg);box-shadow:0 6px 14px rgba(0,0,0,.3);text-align:center}
 .banner span{display:block;font-size:.72em;color:#7a1d17;letter-spacing:.1em}
 .planks{margin-top:auto;display:flex;gap:2.2%;align-items:flex-end;height:58%}
 .plank{flex:1;height:100%;border-radius:2px 2px 0 0;position:relative;box-shadow:0 8px 16px rgba(0,0,0,.35);transform-origin:top center;animation:sway 5s ease-in-out infinite}
@@ -143,7 +143,7 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .paths{padding-block:0}
 .paths .wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media (max-width:760px){.paths .wrap{grid-template-columns:1fr}}
-.path{display:grid;gap:14px;padding:clamp(24px,3.4vw,40px);border-radius:10px;text-decoration:none;color:inherit;position:relative;overflow:hidden}
+.path{display:grid;gap:14px;padding:clamp(24px,3.4vw,40px);border-radius:20px;text-decoration:none;color:inherit;position:relative;overflow:hidden}
 .path.buy{background:var(--basalt);color:var(--on-basalt)}
 .path.build{background:var(--surface);border:1px solid var(--line)}
 .path h3{font-size:clamp(1.8rem,3.2vw,2.5rem)}
@@ -163,7 +163,7 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 @media (max-width:1020px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:480px){.grid{grid-template-columns:1fr}.prod .sw{aspect-ratio:16/7}}
-.prod{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
 .prod .sw{aspect-ratio:4/3;position:relative}
 .prod .sw .badge{position:absolute;top:10px;left:10px;font:600 .7rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-radius:3px;background:rgba(255,255,255,.92);color:#1F2120}
 .prod .body{padding:16px;display:grid;gap:10px;flex:1;align-content:start}
@@ -173,13 +173,13 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .specs dt{color:var(--ink-3)}
 .specs dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
 .prod .foot{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-top:1px solid var(--line);margin-top:auto}
-.price{font:800 1.5rem/1 var(--display)}
+.price{font:700 1.45rem/1 var(--display);letter-spacing:-.02em}
 .price small{font:400 .75rem var(--mono);color:var(--ink-3)}
 .stock{font:500 .74rem/1.2 var(--mono);color:var(--ok);text-align:right}
 .stock.low{color:var(--rust)}
 
 /* Coverage calculator */
-.calc{margin-top:28px;display:grid;grid-template-columns:1.1fr 1fr;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.calc{margin-top:28px;display:grid;grid-template-columns:1.1fr 1fr;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
 @media (max-width:820px){.calc{grid-template-columns:1fr}}
 .calc .in{padding:clamp(20px,3vw,32px);display:grid;gap:16px}
 .calc .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -188,7 +188,7 @@ label{display:grid;gap:6px;font:500 .78rem/1 var(--mono);color:var(--ink-3);lett
 input,select,textarea{font:500 1rem/1.3 var(--body);color:var(--ink);background:var(--ground);border:1px solid var(--line);border-radius:var(--r);padding:12px;width:100%;min-width:0}
 textarea{min-height:96px;resize:vertical}
 .calc .out{background:var(--basalt);color:var(--on-basalt);padding:clamp(20px,3vw,32px);display:grid;gap:16px;align-content:center}
-.calc .big{font:900 clamp(3rem,7vw,4.6rem)/.9 var(--display)}
+.calc .big{font:800 clamp(3rem,7vw,4.6rem)/.9 var(--display);letter-spacing:-.04em}
 .calc .big small{font:500 .9rem var(--mono);opacity:.7;margin-left:6px}
 .calc dl{display:grid;grid-template-columns:1fr auto;gap:8px 16px;margin:0;font:400 .85rem/1.3 var(--mono)}
 .calc dt{opacity:.7}.calc dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
@@ -210,7 +210,7 @@ textarea{min-height:96px;resize:vertical}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
 @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.steps{grid-template-columns:1fr}}
-.steps li{counter-increment:s;display:grid;gap:10px;padding-top:18px;border-top:3px solid var(--ink)}
+.steps li{counter-increment:s;display:grid;gap:10px;padding:22px;border-radius:16px;background:var(--surface);border:1px solid var(--line);align-content:start}
 .steps li::before{content:"Step " counter(s);font:500 .74rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--rust)}
 .steps h3{font-size:1.5rem}
 .steps p{color:var(--ink-2);font-size:.95rem}
@@ -219,7 +219,7 @@ textarea{min-height:96px;resize:vertical}
 /* ============ Projects ============ */
 .proj{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px;gap:14px}
 @media (max-width:820px){.proj{grid-template-columns:1fr 1fr;grid-auto-rows:180px}}
-.shot{border-radius:8px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14px}
+.shot{border-radius:16px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14px}
 .shot.tall{grid-row:span 2}
 @media (max-width:820px){.shot.tall{grid-column:span 2;grid-row:span 1}}
 .shot .cap{background:rgba(15,16,16,.82);color:#fff;padding:9px 11px;border-radius:4px;font:500 .78rem/1.35 var(--mono)}
@@ -231,10 +231,43 @@ textarea{min-height:96px;resize:vertical}
   linear-gradient(90deg,var(--w1),var(--w2),var(--w1))}
 .proj-note{margin-top:14px;font:400 .8rem/1.4 var(--mono);color:var(--ink-3)}
 
+/* ============ Crew ============ */
+.crew{background:var(--basalt);color:var(--on-basalt)}
+.crew .eyebrow{color:var(--oak)}
+.crew .lede{color:color-mix(in srgb,var(--on-basalt) 78%,transparent)}
+.crew-top{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,64px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+@media (max-width:860px){.crew-top{grid-template-columns:1fr}}
+.crew-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.crew-stats div{padding:18px;border-radius:16px;background:color-mix(in srgb,var(--on-basalt) 7%,transparent)}
+.crew-stats strong{display:block;font:800 2.2rem/1 var(--display);letter-spacing:-.03em;color:var(--oak);margin-bottom:6px}
+.crew-stats span{font:500 .78rem/1.3 var(--mono);opacity:.8}
+.roles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:980px){.roles{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.roles{grid-template-columns:1fr}}
+.role{background:var(--surface);color:var(--ink);border-radius:18px;padding:22px;display:grid;gap:10px;align-content:start}
+.role .ico{width:44px;height:44px;border-radius:12px;background:var(--surface-2);display:grid;place-items:center;color:var(--rust)}
+.role .ico svg{width:24px;height:24px}
+.role h3{font-size:1.25rem}
+.role p{color:var(--ink-2);font-size:.92rem}
+.role .n{font:500 .74rem/1 var(--mono);color:var(--ok)}
+.promise{margin-top:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(20px,4vw,48px);align-items:start}
+@media (max-width:860px){.promise{grid-template-columns:1fr}}
+.promise ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.promise li{display:flex;gap:12px;align-items:flex-start}
+.promise li svg{flex:none;width:22px;height:22px;color:var(--oak);margin-top:2px}
+.promise li b{display:block}
+.promise li span{opacity:.75;font-size:.92rem}
+.timeline{background:color-mix(in srgb,var(--on-basalt) 7%,transparent);border-radius:18px;padding:22px}
+.timeline h3{font-size:1.2rem;margin-bottom:4px}
+.timeline .sub{font:400 .78rem/1.4 var(--mono);opacity:.7;margin-bottom:16px}
+.tl-row{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;margin-top:10px}
+.tl-row b{font:500 .78rem/1 var(--mono);opacity:.8}
+.tl-bar{min-height:32px;border-radius:8px;display:flex;align-items:center;padding:6px 10px;font:500 .8rem/1.25 var(--body);color:#2E2520}
+
 /* ============ About ============ */
 .about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}
 @media (max-width:860px){.about .wrap{grid-template-columns:1fr}}
-.duo{aspect-ratio:1;max-width:100%;border-radius:10px;background:var(--surface-2);position:relative;overflow:hidden;display:grid;place-items:center}
+.duo{aspect-ratio:1;max-width:100%;border-radius:24px;background:var(--surface-2);position:relative;overflow:hidden;display:grid;place-items:center}
 .duo svg{width:62%;color:var(--ink-3)}
 .duo .ph{position:absolute;bottom:14px;left:14px;right:14px;font:400 .78rem/1.4 var(--mono);color:var(--ink-3);text-align:center}
 .about blockquote{margin:24px 0 0;padding:0;font:600 clamp(1.3rem,2.4vw,1.7rem)/1.3 var(--body);max-width:32ch}
@@ -254,10 +287,10 @@ textarea{min-height:96px;resize:vertical}
 .hours dd{margin:0;font-variant-numeric:tabular-nums}
 .hours .today{color:var(--oak)}
 .contact{display:grid;gap:10px;margin-top:28px}
-.contact .row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 0;border-top:1px solid rgba(255,255,255,.14);flex-wrap:wrap}
+.contact .row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 0;border-top:1px solid color-mix(in srgb,var(--on-basalt) 16%,transparent);flex-wrap:wrap}
 .contact .row span{font:500 .75rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
 .contact .row b{font-weight:500;user-select:all}
-.form{background:var(--surface);color:var(--ink);border-radius:10px;padding:clamp(22px,3vw,34px);display:grid;gap:16px;align-content:start}
+.form{background:var(--surface);color:var(--ink);border-radius:20px;padding:clamp(22px,3vw,34px);display:grid;gap:16px;align-content:start}
 .form h3{font-size:2rem}
 .form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:480px){.form .two{grid-template-columns:1fr}}
@@ -300,6 +333,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
     <ul>
       <li><a href="#flooring">Flooring</a></li>
       <li><a href="#services">Remodeling</a></li>
+      <li><a href="#crew">Our team</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#about">About us</a></li>
       <li><a href="#visit">Visit</a></li>
@@ -315,17 +349,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
   <div class="wrap">
     <div>
       <p class="eyebrow">Flooring supply + remodeling · Honolulu, HI</p>
-      <h1 style="margin-top:16px">Flooring to go.<br><em>Built</em> by the owners.</h1>
-      <p class="lede">Waterproof luxury vinyl plank and SPC flooring in stock, ready for pickup or same-day delivery. Need it installed? The two of us run the crew, so the people who quote your job are the people who finish it.</p>
+      <h1 style="margin-top:16px">Family-owned.<br><em>Crew-built.</em><br>Done on time.</h1>
+      <p class="lede">Waterproof LVP and SPC flooring in stock for same-day pickup or delivery. When you need it installed, our full-time crew of trained installers and carpenters gets it done right and on schedule, with the owners checking every job.</p>
       <div class="ctas">
         <a class="btn btn-rust" href="#flooring">Shop in-stock flooring
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-line" href="#estimate">Get a remodel quote</a>
       </div>
       <div class="facts">
-        <div><strong>30+</strong>floor styles in stock</div>
-        <div><strong>Same day</strong>delivery on Oʻahu</div>
-        <div><strong>100%</strong>waterproof SPC core</div>
+        <div><strong>12+</strong>in-house pros</div>
+        <div><strong>1–2 days</strong>typical floor install</div>
+        <div><strong>Same day</strong>flooring delivery</div>
       </div>
     </div>
 
@@ -357,9 +391,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
       <span class="go">See in-stock floors <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
     <a class="path build" href="#services">
-      <span class="eyebrow">Licensed contractor</span>
+      <span class="eyebrow">Licensed contractor · in-house crew</span>
       <h3>I need it built</h3>
-      <p>Flooring installs, kitchen cabinets, bathrooms and full remodels. We measure, quote in writing, and handle the job start to finish.</p>
+      <p>Flooring installs, kitchen cabinets, bathrooms and full remodels. One project manager, our own crew, and a start and finish date in writing.</p>
       <ul><li>Install</li><li>Cabinets</li><li>Bathrooms</li><li>Whole home</li></ul>
       <span class="go" style="color:var(--rust)">Start a free estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
@@ -461,19 +495,80 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">How a remodel works with us</p>
-      <h2>Four steps, one crew</h2>
+      <h2>Four steps, no guesswork</h2>
     </div>
     <ol class="steps">
       <li><h3>Visit the showroom</h3><p>Walk the sample wall, take planks home, compare them in your own light.</p><span class="when">Walk-ins welcome</span></li>
       <li><h3>Free measure</h3><p>We come to you, check the subfloor and take exact measurements.</p><span class="when">Within 3 business days</span></li>
-      <li><h3>Written quote</h3><p>Materials, labor and timeline itemized on one page. No surprise add-ons.</p><span class="when">Within 48 hours</span></li>
-      <li><h3>Install &amp; walkthrough</h3><p>Our own crew installs, cleans up, and walks the finished job with you.</p><span class="when">1-year workmanship warranty</span></li>
+      <li><h3>Quote &amp; schedule</h3><p>Materials, labor and a fixed start date itemized on one page. No surprise add-ons.</p><span class="when">Within 48 hours</span></li>
+      <li><h3>Crew installs</h3><p>Our trained crew works to the schedule, cleans up daily, and an owner walks the finished job with you.</p><span class="when">1-year workmanship warranty</span></li>
     </ol>
   </div>
 </section>
 
+<!-- ============ CREW ============ -->
+<section class="crew" id="crew">
+  <div class="wrap">
+    <div class="crew-top">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Our team</p>
+        <h2>A family business with a full professional crew</h2>
+        <p class="lede">The owners run the company. A full-time team of installers, carpenters and a project manager runs your job. Everyone on site works for us and is trained on the products we sell.</p>
+      </div>
+      <div class="crew-stats">
+        <div><strong>12+</strong><span>full-time crew members</span></div>
+        <div><strong>3</strong><span>install teams out daily</span></div>
+        <div><strong>0</strong><span>day-labor subcontractors</span></div>
+      </div>
+    </div>
+
+    <div class="roles">
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M9 11h6M9 15h4"/></svg></span>
+        <h3>Project manager</h3>
+        <p>Your single point of contact. Sets the schedule, orders materials and sends progress photos by text.</p>
+        <span class="n">1 per job</span>
+      </div>
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18h18M3 14h18M8 14v4M14 10v4M3 10h18"/></svg></span>
+        <h3>Flooring installers</h3>
+        <p>Subfloor prep, leveling, click-lock or glue-down install, clean transitions and stair nosing.</p>
+        <span class="n">Trained on SPC &amp; LVP</span>
+      </div>
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 11h18M12 4v16"/></svg></span>
+        <h3>Finish carpenters</h3>
+        <p>Cabinets, baseboards, doors and trim, installed level and square the first time.</p>
+        <span class="n">Cabinets &amp; millwork</span>
+      </div>
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>
+        <h3>Tile &amp; bath specialists</h3>
+        <p>Waterproofing, shower pans, tile and vanities, built for Hawaiʻi humidity.</p>
+        <span class="n">Wet areas</span>
+      </div>
+    </div>
+
+    <div class="promise">
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Start date in writing</b><span>You know the day we arrive and the day we finish before you sign.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Materials already in stock</b><span>No waiting on shipping to the islands. Your floor comes from our warehouse.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Daily cleanup &amp; progress photos</b><span>Your home stays livable, and you see progress even when you're at work.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Owner walkthrough</b><span>One of the owners checks the finished work with you before final payment.</span></div></li>
+      </ul>
+      <div class="timeline">
+        <h3>A typical condo floor, start to finish</h3>
+        <p class="sub">2-bedroom condo · about 800 sq ft · SPC flooring</p>
+        <div class="tl-row"><b>Day 1</b><span class="tl-bar" style="background:#E2B97F">Remove old floor · level &amp; prep subfloor</span></div>
+        <div class="tl-row"><b>Day 2</b><span class="tl-bar" style="background:#EDA877">Install planks · transitions</span></div>
+        <div class="tl-row"><b>Day 3</b><span class="tl-bar" style="background:#B9D1AA;width:70%">Baseboards · cleanup · walkthrough</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PROJECTS ============ -->
-<section id="projects" style="padding-top:0">
+<section id="projects">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Recent work on Oʻahu</p>
@@ -495,17 +590,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
   <div class="wrap">
     <div class="duo" aria-label="Photo placeholder for the owners">
       <svg viewBox="0 0 120 100" fill="currentColor" aria-hidden="true"><circle cx="42" cy="30" r="14"/><circle cx="80" cy="34" r="12"/><path d="M16 96c0-20 12-38 26-38s26 18 26 38zM58 96c2-18 10-32 22-32s24 14 24 32z"/></svg>
-      <p class="ph">Owners' photo · in front of the sample wall</p>
+      <p class="ph">Owners + crew photo · in front of the sample wall</p>
     </div>
     <div>
       <p class="eyebrow">Locally owned · Honolulu</p>
-      <h2 style="margin-top:14px">It's really just the two of us</h2>
-      <p class="lede" style="margin-top:18px">Husband &amp; Wife Construction started with one truck and a wall of flooring samples. Today we run a flooring warehouse and a remodeling crew, and one of us still answers the phone and the other is still on the job site.</p>
-      <blockquote>“When you call, you talk to an owner. When we quote, we're the ones who show up.”</blockquote>
+      <h2 style="margin-top:14px">Started by a husband and wife. Built into a team.</h2>
+      <p class="lede" style="margin-top:18px">Husband &amp; Wife Construction started with one truck and a wall of flooring samples. Today it's a flooring warehouse and a professional crew serving homes across Oʻahu. We still review every quote and stand behind every job.</p>
+      <blockquote>“You get the care of a family business and the speed of a full crew.”</blockquote>
       <p class="sig">— [Owner names] <span class="ph-note">placeholder</span></p>
       <div class="vals">
-        <div><b>One point of contact</b>From the quote to the final walkthrough.</div>
-        <div><b>Stock on hand</b>No six-week wait for your floor to ship.</div>
+        <div><b>Owners involved</b>Every quote reviewed, every job walked.</div>
+        <div><b>Pros on site</b>A trained, full-time crew, not day labor.</div>
         <div><b>Built for the islands</b>Waterproof, termite-proof, humidity-stable materials.</div>
       </div>
     </div>
