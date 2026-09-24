@@ -282,6 +282,7 @@ textarea{min-height:96px;resize:vertical}
 .visit .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,64px)}
 @media (max-width:860px){.visit .wrap{grid-template-columns:1fr}}
 .visit .eyebrow{color:var(--oak)}
+.visit .form .eyebrow{color:var(--ink-3)}
 .visit .lede{color:color-mix(in srgb,var(--on-basalt) 75%,transparent)}
 .hours{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;margin:28px 0 0;font:400 .92rem/1.3 var(--mono)}
 .hours dd{margin:0;font-variant-numeric:tabular-nums}
@@ -290,7 +291,7 @@ textarea{min-height:96px;resize:vertical}
 .contact .row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 0;border-top:1px solid color-mix(in srgb,var(--on-basalt) 16%,transparent);flex-wrap:wrap}
 .contact .row span{font:500 .75rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
 .contact .row b{font-weight:500;user-select:all}
-.form{background:var(--surface);color:var(--ink);border-radius:20px;padding:clamp(22px,3vw,34px);display:grid;gap:16px;align-content:start}
+.form{background:var(--surface);color:var(--ink);border-radius:20px;padding:clamp(22px,3vw,34px);display:grid;gap:16px;align-content:start;align-self:start}
 .form h3{font-size:2rem}
 .form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:480px){.form .two{grid-template-columns:1fr}}
@@ -319,8 +320,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 
 <div class="strip">
   <div class="wrap">
-    <span class="open">Open today · 8:00 AM – 5:00 PM</span>
-    <span>Same-day delivery on in-stock flooring · Oʻahu</span>
+    <span class="open" id="openNow">Open Mon – Sat · 7:30 AM – 5:30 PM</span>
+    <span>619 Mapunapuna St · (808) 367-6039</span>
   </div>
 </div>
 
@@ -348,7 +349,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 <section class="hero">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Flooring supply + remodeling · Honolulu, HI</p>
+      <p class="eyebrow">Flooring wholesale &amp; retail + remodeling · Māpunapuna, Honolulu</p>
       <h1 style="margin-top:16px">Family-owned.<br><em>Crew-built.</em><br>Done on time.</h1>
       <p class="lede">Waterproof LVP and SPC flooring in stock for same-day pickup or delivery. When you need it installed, our full-time crew of trained installers and carpenters gets it done right and on schedule, with the owners checking every job.</p>
       <div class="ctas">
@@ -384,10 +385,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 <section class="paths" aria-label="Choose what you need">
   <div class="wrap">
     <a class="path buy" href="#flooring">
-      <span class="eyebrow" style="color:var(--oak)">For homeowners &amp; contractors</span>
+      <span class="eyebrow" style="color:var(--oak)">Wholesale &amp; retail · contractors welcome</span>
       <h3>I'm buying flooring</h3>
-      <p>Browse what's on the shelf today, check coverage per box, and pick up or get it delivered the same day.</p>
-      <ul><li>LVP</li><li>SPC</li><li>Underlayment</li><li>Trim &amp; stair nose</li></ul>
+      <p>Bulk pricing for contractors and builders, friendly help for homeowners. Pick up in store or get it delivered the same day.</p>
+      <ul><li>Vinyl plank</li><li>Laminate</li><li>Hardwood</li><li>Tile</li><li>Carpet</li><li>Cabinets</li><li>Countertops</li></ul>
       <span class="go">See in-stock floors <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
     <a class="path build" href="#services">
@@ -406,7 +407,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
     <div class="sec-head">
       <p class="eyebrow">In the warehouse now</p>
       <h2>Floors you can take home today</h2>
-      <p class="lede">Every floor below is sitting in our Honolulu warehouse. Prices are per square foot; boxes are sold whole.</p>
+      <p class="lede">We carry vinyl plank, laminate, hardwood, tile and carpet for homes and commercial jobs. Below is a sample of the vinyl plank in our Māpunapuna warehouse. Prices are per square foot, and boxes are sold whole.</p>
     </div>
 
     <div class="cat-bar">
@@ -470,13 +471,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
       </div>
       <div class="svc-item">
         <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="24" height="22" rx="1"/><path d="M4 14h24M16 5v22M12 9.5h1M19 9.5h1M12 19h1M19 19h1"/></svg>
-        <h3>Kitchen cabinets</h3>
-        <p>Shaker and flat-panel cabinets from our showroom, countertops, and installation that lines up the first time.</p>
+        <h3>Cabinets &amp; countertops</h3>
+        <p>Kitchen and bath cabinets plus countertops from our showroom, installed level and square the first time.</p>
         <span class="from">Design visit included</span>
       </div>
       <div class="svc-item">
         <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17h24v3a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6v-3zM8 17V7a3 3 0 0 1 6 0M9 26l-1 3M23 26l1 3"/></svg>
-        <h3>Bathrooms</h3>
+        <h3>Tile &amp; bathrooms</h3>
         <p>Tub-to-shower conversions, vanities, waterproof floors and tile. Built for Hawaiʻi humidity.</p>
         <span class="from">Written quote in 48 hours</span>
       </div>
@@ -613,16 +614,18 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
     <div>
       <p class="eyebrow">Showroom &amp; warehouse</p>
       <h2 style="margin-top:14px">Come see the sample wall</h2>
-      <p class="lede" style="margin-top:18px">Parking out front. Bring a room photo and your measurements and we'll help you pick.</p>
+      <p class="lede" style="margin-top:18px">In-store shopping, in-store pickup and white-glove delivery. Bring a room photo and your measurements and we'll help you pick.</p>
       <dl class="hours" id="hours">
-        <dt data-d="1">Mon – Fri</dt><dd data-d="1">8:00 AM – 5:00 PM</dd>
-        <dt data-d="6">Saturday</dt><dd data-d="6">9:00 AM – 3:00 PM</dd>
+        <dt data-d="1">Mon – Fri</dt><dd data-d="1">7:30 AM – 5:30 PM</dd>
+        <dt data-d="6">Saturday</dt><dd data-d="6">7:30 AM – 5:30 PM</dd>
         <dt data-d="0">Sunday</dt><dd data-d="0">Closed</dd>
       </dl>
       <div class="contact">
-        <div class="row"><span>Phone</span><b>(808) 000-0000</b></div>
-        <div class="row"><span>Address</span><b>[Street address], Honolulu, HI 968xx</b></div>
-        <div class="row"><span>Email</span><b>hello@[domain].com</b></div>
+        <div class="row"><span>Phone / text</span><b>(808) 367-6039</b></div>
+        <div class="row"><span>Address</span><b>619 Mapunapuna St, Honolulu, HI 96819</b></div>
+        <div class="row"><span>Directions</span><a href="https://www.google.com/maps/search/?api=1&amp;query=619+Mapunapuna+St+Honolulu+HI+96819" target="_blank" rel="noopener" style="color:var(--oak)">Open in Google Maps →</a></div>
+        <div class="row"><span>We accept</span><b>Credit cards · Zelle · Venmo</b></div>
+        <div class="row"><span>Accessibility</span><b>ASL proficient staff</b></div>
       </div>
     </div>
 
@@ -660,15 +663,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Husband &amp; Wife Construction LLC · Honolulu, Hawaiʻi</span>
+    <span>© 2026 Husband &amp; Wife Construction LLC · 619 Mapunapuna St, Honolulu, HI 96819 · (808) 367-6039</span>
     <span>HI Contractor Lic. # [C-XXXXX] · Licensed &amp; insured</span>
   </div>
 </footer>
 
 <nav class="dock" aria-label="Quick actions">
-  <a href="tel:+18080000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
-  <a href="sms:+18080000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text</a>
-  <a href="#visit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 21 12l-9 10L3 12z"/><path d="M9 13v-2h5V9l3 2.5L14 14v-2"/></svg>Directions</a>
+  <a href="tel:+18083676039"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a href="sms:+18083676039"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=619+Mapunapuna+St+Honolulu+HI+96819" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 21 12l-9 10L3 12z"/><path d="M9 13v-2h5V9l3 2.5L14 14v-2"/></svg>Directions</a>
   <a class="hot" href="#estimate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>Estimate</a>
 </nav>
 
@@ -736,6 +739,15 @@ calc();
 // Highlight today's hours
 const d = new Date().getDay(), key = d===0 ? "0" : d===6 ? "6" : "1";
 document.querySelectorAll(`#hours [data-d="${key}"]`).forEach(el => el.classList.add("today"));
+
+// Open / closed now, in Hawaiʻi time
+try{
+  const hst = new Date(new Date().toLocaleString("en-US",{timeZone:"Pacific/Honolulu"}));
+  const mins = hst.getHours()*60 + hst.getMinutes(), open = hst.getDay()!==0 && mins>=450 && mins<1050;
+  const el = document.getElementById("openNow");
+  el.textContent = open ? "Open now · until 5:30 PM" : "Closed now · Opens Mon – Sat 7:30 AM";
+  if(!open) el.style.color = "var(--oak)";
+}catch(e){}
 
 // Estimate form (front-end only – wire to email/CRM when building for real)
 document.getElementById("estimate").addEventListener("submit", e => {
