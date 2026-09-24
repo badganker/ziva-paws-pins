@@ -4,6 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Husband &amp; Wife Construction</title>
+<meta name="description" content="H&amp;W Flooring by Husband &amp; Wife Construction, Honolulu. Vinyl plank from $3.99/sq ft, $3/sq ft installation, contractor wholesale pricing, same-day delivery. 619 Mapunapuna St · (808) 766-0425.">
+<meta name="theme-color" content="#CF6A34">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Husband &amp; Wife Construction · H&amp;W Flooring Honolulu">
+<meta property="og:description" content="Flooring in stock from $3.99/sq ft, transparent $3/sq ft installation, 2-year warranty. Open to the public, no appointment needed.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23CF6A34'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='24' fill='white' text-anchor='middle'%3EH%26amp;W%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Husband & Wife Construction LLC","alternateName":"H&W Flooring",
+ "telephone":"+1-808-766-0425","priceRange":"$$",
+ "address":{"@type":"PostalAddress","streetAddress":"619 Mapunapuna St","addressLocality":"Honolulu","addressRegion":"HI","postalCode":"96819","addressCountry":"US"},
+ "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:30","closes":"17:30"}],
+ "paymentAccepted":"Credit Card, Zelle, Venmo","areaServed":"Oahu, Hawaii"}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -58,6 +71,7 @@
 }
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--ground);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
@@ -95,7 +109,7 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .nav ul a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
 .nav ul a:hover{color:var(--ink)}
 @media (max-width:900px){.nav ul{display:none}.nav .btn{margin-left:auto}}
-@media (max-width:420px){.nav .btn{padding:.8em 1em;font-size:.85rem}.logo small{display:none}}
+@media (max-width:480px){.nav .btn{display:none}.nav .menu-btn{margin-left:auto}}
 
 /* ============ Hero ============ */
 .hero{padding-block:clamp(40px,6vw,72px) clamp(48px,7vw,88px)}
@@ -360,6 +374,38 @@ footer{padding-block:36px 110px;font:400 .8rem/1.6 var(--mono);color:var(--ink-3
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
 @media (min-width:761px){footer{padding-bottom:36px}}
 
+/* ============ Mobile refinements ============ */
+.swipe-hint{display:none;font:400 .76rem/1 var(--mono);color:var(--ink-3);margin:-4px 0 10px}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);place-items:center;cursor:pointer;flex:none}
+.menu-btn svg{width:22px;height:22px}
+.mobile-menu{display:grid;border-top:1px solid var(--line);padding:8px clamp(16px,4vw,32px) 14px}
+.mobile-menu a{padding:12px 0;color:var(--ink);text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.mobile-menu a:last-child{border-bottom:0}
+@media (max-width:900px){.menu-btn{display:grid}.nav .wrap{gap:12px}}
+@media (min-width:901px){.mobile-menu{display:none!important}}
+@media (max-width:640px){
+  .strip-more{display:none}
+  .strip .wrap{justify-content:center}
+  .hero .ctas .btn{flex:1 1 100%;justify-content:center}
+  /* catalog becomes a swipeable row */
+  .grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(-1 * clamp(16px,4vw,32px));padding:4px clamp(16px,4vw,32px) 14px;scrollbar-width:none}
+  .grid::-webkit-scrollbar{display:none}
+  .prod{flex:0 0 78%;scroll-snap-align:start}
+  .prod .sw{aspect-ratio:16/9}
+  .swipe-hint{display:block}
+  .tier{width:100%}
+  .tier button{flex:1;padding:9px 6px}
+  .calc .row{grid-template-columns:1fr 1fr}
+  .calc .row label:last-child{grid-column:1/-1}
+  .ptable thead{display:none}
+  .ptable tr{display:block;border-bottom:1px solid var(--line)}
+  .ptable tr:last-child{border-bottom:0}
+  .ptable td{display:block;border-bottom:0;width:auto!important;padding:14px 18px 0}
+  .ptable td + td{padding:6px 18px 16px}
+  .crew-stats strong{font-size:1.8rem}
+}
+
+
 /* Mobile action bar – mirrors Call / Directions / Text on the Google profile */
 .dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;grid-template-columns:repeat(4,1fr);background:var(--surface);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))}
 .dock a{display:grid;justify-items:center;gap:4px;font:600 .72rem/1 var(--body);color:var(--ink-2);text-decoration:none;padding:6px 0}
@@ -375,7 +421,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 <div class="strip">
   <div class="wrap">
     <span class="open" id="openNow">Open Mon – Sat · 7:30 AM – 5:30 PM</span>
-    <span>Open to the public · no appointment needed · (808) 766-0425</span>
+    <span class="strip-more">Open to the public · no appointment needed · (808) 766-0425</span>
   </div>
 </div>
 
@@ -394,7 +440,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
       <li><a href="#visit">Visit</a></li>
     </ul>
     <a class="btn btn-rust" href="#estimate">Free estimate</a>
+    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
+  <nav class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#flooring">Flooring</a><a href="#pricing">Install pricing</a><a href="#contractors">Contractors</a>
+    <a href="#services">Remodeling</a><a href="#crew">Our team</a><a href="#projects">Projects</a><a href="#visit">Visit &amp; hours</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -477,13 +530,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
     <div class="tier-row">
       <div class="tier" role="group" aria-label="Show prices for">
         <button type="button" data-d="0" aria-pressed="true">Retail</button>
-        <button type="button" data-d="0.30" aria-pressed="false">Contractor −30%</button>
+        <button type="button" data-d="0.30" aria-pressed="false">−30%</button>
         <button type="button" data-d="0.35" aria-pressed="false">−35%</button>
         <button type="button" data-d="0.40" aria-pressed="false">−40%</button>
       </div>
-      <p class="cat-note">Contractor pricing for <b>DCCA-verified contractors</b> · <a href="#contractors">see tiers</a></p>
+      <p class="cat-note">−30/35/40% = contractor pricing for <b>DCCA-verified contractors</b> · <a href="#contractors">see tiers</a></p>
     </div>
 
+    <p class="swipe-hint">Swipe to see all styles →</p>
     <div class="grid" id="grid"></div>
 
     <!-- Coverage calculator -->
@@ -500,7 +554,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
           <label for="c-len">Length (ft)<input id="c-len" type="number" min="1" step="0.5" value="14" inputmode="decimal"></label>
           <label for="c-wid">Width (ft)<input id="c-wid" type="number" min="1" step="0.5" value="12" inputmode="decimal"></label>
           <label for="c-waste">Overage
-            <select id="c-waste"><option value="0.07">7% straight lay</option><option value="0.1" selected>10% standard</option><option value="0.15">15% herringbone / diagonal</option></select>
+            <select id="c-waste"><option value="0.07">7% · straight</option><option value="0.1" selected>10% · standard</option><option value="0.15">15% · diagonal</option></select>
           </label>
         </div>
         <div class="checks">
@@ -881,7 +935,7 @@ render();
 
 // Coverage calculator
 const sel = document.getElementById("c-prod");
-sel.innerHTML = products.map(p => `<option value="${p.id}">${p.name} · ${p.box} sq ft/box</option>`).join("");
+sel.innerHTML = products.map(p => `<option value="${p.id}">${p.name} (${p.box} sq ft/box)</option>`).join("");
 function calc(){
   const p = products.find(x => x.id===sel.value);
   const L = parseFloat(document.getElementById("c-len").value)||0;
@@ -906,6 +960,13 @@ function calc(){
 document.getElementById("calcForm").addEventListener("input", calc);
 document.getElementById("calcForm").addEventListener("submit", e => e.preventDefault());
 calc();
+
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn"), menu = document.getElementById("mobileMenu");
+menuBtn.addEventListener("click", () => {
+  const open = menu.hidden; menu.hidden = !open; menuBtn.setAttribute("aria-expanded", open);
+});
+menu.addEventListener("click", e => { if(e.target.tagName==="A"){ menu.hidden = true; menuBtn.setAttribute("aria-expanded", false); } });
 
 // Highlight today's hours
 const d = new Date().getDay(), key = d===0 ? "0" : d===6 ? "6" : "1";
