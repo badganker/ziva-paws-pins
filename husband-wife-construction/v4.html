@@ -571,6 +571,35 @@ body{font-weight:400;font-size:16px;line-height:1.65}
   .dock{border-top:1px solid var(--line);padding-top:6px}
   .dock a{font-weight:500;letter-spacing:.06em}
 }
+/* ============ Refinement pass ============ */
+.mark.mono{width:44px;height:44px;background:var(--basalt);color:var(--oak);display:grid;place-items:center;font:500 1.15rem/1 var(--display);letter-spacing:-.02em;border:0}
+.mark.mono em{font-style:italic;font-weight:400;margin:0 1px;color:var(--on-basalt);opacity:.8}
+/* path tags as a quiet list */
+.path ul{gap:4px 0}
+.path li{border:0!important;padding:0!important;opacity:.75;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.path li + li::before{content:"·";margin:0 10px;opacity:.6}
+/* project captions: gallery labels */
+.shot{align-items:flex-end;padding:0}
+.shot .cap{background:var(--ground);color:var(--ink);border-radius:0;padding:12px 16px;width:100%;border-top:1px solid var(--line)}
+.shot .cap b{font:500 1.15rem/1.1 var(--display);letter-spacing:0;text-transform:none;margin-bottom:4px}
+/* about */
+.duo.arch{border-radius:999px 999px 0 0!important;background:linear-gradient(180deg,#F1E8DB,#E6D8C5)}
+.duo.arch svg{width:46%;color:#B8A58E}
+.about blockquote{font:italic 400 clamp(1.7rem,3vw,2.3rem)/1.2 var(--display);letter-spacing:-.005em;max-width:24ch;color:var(--ink);border-left:1px solid var(--oak);padding-left:22px}
+/* footer */
+footer{padding-block:0 110px}
+footer .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-block:56px 40px;text-transform:none;letter-spacing:0}
+.foot-sign{display:flex;align-items:flex-start;gap:20px}
+.foot-big{font:500 clamp(2rem,3.4vw,2.8rem)/1.02 var(--display);color:var(--ink);letter-spacing:-.015em;text-transform:none}
+.foot-big em{font-style:italic;color:var(--accent-text)}
+.foot-stamp{position:static;transform:rotate(-4deg);font-size:.9rem;margin-top:6px}
+.foot-col{display:grid;gap:6px;align-content:start;font:400 .9rem/1.5 var(--body);color:var(--ink-2);letter-spacing:0;text-transform:none}
+.foot-col b{font:500 .68rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.foot-col a{color:var(--accent-text);text-decoration:none}
+footer .foot-legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-block:18px;border-top:1px solid var(--line)}
+@media (min-width:761px){footer{padding-bottom:0}}
+@media (max-width:900px){footer .foot{grid-template-columns:1fr 1fr}.foot-sign{grid-column:1/-1}}
+@media (max-width:520px){footer .foot{grid-template-columns:1fr;gap:24px;padding-block:40px 28px}}
 </style>
 </head>
 <body>
@@ -585,7 +614,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Husband &amp; Wife Construction home">
-      <span class="mark seal" aria-hidden="true"><i>夫</i><i>同</i><i>妻</i><i>心</i></span>
+      <span class="mark mono" aria-hidden="true">H<em>&amp;</em>W</span>
       <span><b>Husband &amp; Wife</b><small>Construction · Honolulu</small></span>
     </a>
     <ul>
@@ -1068,9 +1097,9 @@ body{font-weight:400;font-size:16px;line-height:1.65}
       <div class="timeline">
         <h3>A typical condo floor, start to finish</h3>
         <p class="sub">2-bedroom condo · about 800 sq ft · SPC flooring</p>
-        <div class="tl-row"><b>Day 1</b><span class="tl-bar" style="background:#E2B97F">Remove old floor · level &amp; prep subfloor</span></div>
-        <div class="tl-row"><b>Day 2</b><span class="tl-bar" style="background:#EDA877">Install planks · transitions</span></div>
-        <div class="tl-row"><b>Day 3</b><span class="tl-bar" style="background:#B9D1AA;width:70%">Baseboards · cleanup · walkthrough</span></div>
+        <div class="tl-row"><b>Day 1</b><span class="tl-bar" style="background:#E6D2B2">Remove old floor · level &amp; prep subfloor</span></div>
+        <div class="tl-row"><b>Day 2</b><span class="tl-bar" style="background:#D4AC78">Install planks · transitions</span></div>
+        <div class="tl-row"><b>Day 3</b><span class="tl-bar" style="background:#B08355;color:#FBF6EF;width:70%">Baseboards · cleanup · walkthrough</span></div>
       </div>
     </div>
   </div>
@@ -1097,7 +1126,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <!-- ============ ABOUT ============ -->
 <section class="about" id="about" style="background:var(--surface);border-block:1px solid var(--line)">
   <div class="wrap">
-    <div class="duo" aria-label="Photo placeholder for the owners">
+    <div class="duo arch" aria-label="Photo placeholder for the owners">
       <svg viewBox="0 0 120 100" fill="currentColor" aria-hidden="true"><circle cx="42" cy="30" r="14"/><circle cx="80" cy="34" r="12"/><path d="M16 96c0-20 12-38 26-38s26 18 26 38zM58 96c2-18 10-32 22-32s24 14 24 32z"/></svg>
       <p class="ph">Owners + crew photo · in front of the sample wall</p>
     </div>
@@ -1171,9 +1200,17 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 </main>
 
 <footer>
-  <div class="wrap">
-    <span class="mark seal foot-seal" aria-hidden="true"><i>夫</i><i>同</i><i>妻</i><i>心</i></span>
-    <span>© 2026 Husband &amp; Wife Construction LLC · 619 Mapunapuna St, Honolulu, HI 96819 · (808) 766-0425</span>
+  <div class="wrap foot">
+    <div class="foot-sign">
+      <p class="foot-big">Flooring to go.<br><em>Built to last.</em></p>
+      <span class="stamp foot-stamp" aria-hidden="true"><i>诚</i><i>信</i></span>
+    </div>
+    <div class="foot-col"><b>Visit</b><span>619 Mapunapuna St</span><span>Honolulu, HI 96819</span><a href="https://www.google.com/maps/search/?api=1&amp;query=619+Mapunapuna+St+Honolulu+HI+96819" target="_blank" rel="noopener">Directions →</a></div>
+    <div class="foot-col"><b>Hours</b><span>Mon – Sat · 7:30 AM – 5:30 PM</span><span>Sunday · Closed</span><span>No appointment needed</span></div>
+    <div class="foot-col"><b>Contact</b><span>(808) 766-0425</span><span>Call or text</span><span>Credit cards · Zelle · Venmo</span></div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© 2026 Husband &amp; Wife Construction LLC · H&amp;W Flooring</span>
     <span>HI Contractor Lic. # [C-XXXXX] · Licensed &amp; insured</span>
   </div>
 </footer>
