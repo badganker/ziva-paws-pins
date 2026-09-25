@@ -19,7 +19,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&family=Noto+Serif+SC:wght@500;700&text=%E4%B8%93%E4%B8%9A%E4%BA%8E%E4%BB%AC%E4%BB%B7%E4%BD%9C%E4%BE%8B%E4%BF%A1%E4%BF%AE%E5%85%B3%E5%8C%85%E5%8C%A0%E5%8F%91%E5%90%8C%E5%95%86%E5%9B%A2%E5%9C%B0%E5%9D%80%E5%A4%AB%E5%A6%BB%E5%AE%89%E5%B7%A5%E5%BA%97%E5%BF%83%E6%88%91%E6%89%B9%E6%89%BF%E6%96%BD%E6%98%8E%E6%9C%A8%E6%9D%BF%E6%A0%87%E6%A1%88%E6%B5%81%E7%8E%B0%E7%A0%81%E7%A8%8B%E8%A3%85%E8%AF%9A%E8%B4%A7%E9%97%A8%E9%98%9F&display=swap">
 <style>
 /* ============ Design tokens · Draft 4 "Gallery" ============
    Pure white, black type, hairlines. The wood is the only color.
@@ -522,6 +522,55 @@ body{font-weight:400;font-size:16px;line-height:1.65}
   .hero .facts dd{font-size:1.8rem}
   .hero .facts small{display:block;margin:4px 0 0}
 }
+/* ============ Chinese accents: seal, moon gate, bilingual labels ============ */
+:root{--seal:#A8342A;--zh:"Noto Serif SC","Songti SC","STSong","SimSun",serif}
+.eyebrow .zh{font-family:var(--zh);font-weight:500;letter-spacing:.3em;text-transform:none;color:var(--seal);margin-left:.9em;padding-left:.9em;border-left:1px solid var(--line);font-size:1.08em}
+.mark.seal{width:44px;height:44px;background:var(--seal);color:#FBEFE3;border:0;border-radius:3px!important;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;grid-auto-flow:column;direction:rtl;place-items:center;padding:6px;box-shadow:inset 0 0 0 2px var(--seal),inset 0 0 0 3px rgba(251,239,227,.85)!important;font-family:var(--zh);font-weight:700;font-size:.8rem;line-height:1}
+.mark.seal i{font-style:normal}
+.foot-seal{width:40px;height:40px}
+.hero-fig .wall{background:linear-gradient(180deg,#F3EBDF,#E9DDCC);display:grid;place-items:center;padding:8%;position:relative}
+.gate{width:78%;aspect-ratio:1;border-radius:50%;overflow:hidden;position:relative;box-shadow:0 0 0 10px #F7F1E8,0 0 0 11px rgba(43,32,25,.18),0 30px 50px -30px rgba(43,32,25,.5)}
+.gate .planks{height:100%;margin:0;gap:0;align-items:stretch}
+.gate .plank{height:100%!important;border-radius:0;box-shadow:inset -1px 0 0 rgba(0,0,0,.08);animation:none}
+.gate .plank:hover{transform:none;filter:brightness(1.06)}
+.vert{position:absolute;left:6%;top:8%;display:flex;flex-direction:column;gap:.45em;font-family:var(--zh);font-weight:500;font-size:clamp(1rem,1.8vw,1.35rem);line-height:1;color:#2B2019}
+.vert i,.stamp i{font-style:normal}
+.stamp{position:absolute;right:7%;bottom:9%;padding:.4em .45em;display:flex;flex-direction:column;gap:.15em;line-height:1;background:var(--seal);color:#FBEFE3;font-family:var(--zh);font-weight:700;font-size:clamp(.85rem,1.3vw,1rem);border-radius:3px;box-shadow:inset 0 0 0 2px var(--seal),inset 0 0 0 3px rgba(251,239,227,.8);transform:rotate(-4deg)}
+.wall .tag{left:auto;right:14px;top:14px;bottom:auto}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--seal:#C4473A}}
+:root[data-theme="dark"]{--seal:#C4473A}
+
+/* ============ Mobile refinements (draft 4) ============ */
+@media (max-width:640px){
+  section{padding-block:64px}
+  h2{font-size:2.35rem}
+  .sec-head{margin-bottom:28px}
+  .eyebrow .zh{display:block;margin:8px 0 0;padding:0;border:0}
+  .hero{padding-block:28px 56px}
+  .hero h1{font-size:clamp(2.7rem,12.5vw,3.4rem)}
+  .hero .lede{margin-top:20px;font-size:1.02rem}
+  .hero .ctas{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .hero .ctas .btn{padding:1.2em .8em;justify-content:center;flex:none}
+  .hero .facts{margin-top:32px}
+  .hero-fig{margin-top:8px}
+  .hero-fig .wall{aspect-ratio:1/1}
+  .hero-fig figcaption{flex-direction:column;gap:4px;letter-spacing:.14em}
+  /* swipe rows instead of long stacks */
+  .roles,.tiers,.steps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(-1 * clamp(16px,4vw,32px));padding:2px clamp(16px,4vw,32px) 14px;scrollbar-width:none}
+  .roles::-webkit-scrollbar,.tiers::-webkit-scrollbar,.steps::-webkit-scrollbar{display:none}
+  .role,.tier-card,.steps li{flex:0 0 80%;scroll-snap-align:start}
+  .crew-stats{grid-template-columns:1fr;gap:0}
+  .crew-stats div{display:flex;align-items:baseline;gap:14px;padding:14px 0;background:transparent!important;border-top:1px solid var(--line)}
+  .crew-stats strong{margin:0;min-width:2.2em}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc-item,.svc-item + .svc-item{padding:20px 12px 20px 0;border-left:0}
+  .svc-item:nth-child(2n){padding-left:12px;border-left:1px solid var(--line)}
+  .svc-item p{font-size:.86rem}
+  .svc-item h3{font-size:1.2rem}
+  .proj{grid-auto-rows:150px}
+  .dock{border-top:1px solid var(--line);padding-top:6px}
+  .dock a{font-weight:500;letter-spacing:.06em}
+}
 </style>
 </head>
 <body>
@@ -536,7 +585,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Husband &amp; Wife Construction home">
-      <span class="mark">H&amp;W</span>
+      <span class="mark seal" aria-hidden="true"><i>夫</i><i>同</i><i>妻</i><i>心</i></span>
       <span><b>Husband &amp; Wife</b><small>Construction · Honolulu</small></span>
     </a>
     <ul>
@@ -580,21 +629,24 @@ body{font-weight:400;font-size:16px;line-height:1.65}
     </div>
 
     <figure class="hero-fig">
-      <div class="wall" role="img" aria-label="Eight flooring plank samples displayed on the showroom wall, from pale ash to dark walnut">
-        <div class="banner">Flooring to go<span>Same day delivery</span></div>
-        <div class="planks">
-          <div class="plank wood w-ash" title="Kailua Whitewash"></div>
-          <div class="plank wood w-natural" title="Makai Natural Oak"></div>
-          <div class="plank wood w-drift" title="Driftwood Linen"></div>
-          <div class="plank wood w-honey" title="Honey Hickory"></div>
-          <div class="plank wood w-greige" title="Diamond Head Greige"></div>
-          <div class="plank wood w-koa" title="Island Koa"></div>
-          <div class="plank wood w-smoke" title="Lava Smoke Oak"></div>
-          <div class="plank wood w-walnut" title="Mānoa Walnut"></div>
+      <div class="wall" role="img" aria-label="Eight flooring plank samples seen through a round moon-gate window, from pale ash to dark walnut">
+        <span class="vert" aria-hidden="true"><i>木</i><i>作</i><i>匠</i><i>心</i></span>
+        <div class="gate">
+          <div class="planks">
+            <div class="plank wood w-ash" title="Kailua Whitewash"></div>
+            <div class="plank wood w-natural" title="Makai Natural Oak"></div>
+            <div class="plank wood w-drift" title="Driftwood Linen"></div>
+            <div class="plank wood w-honey" title="Honey Hickory"></div>
+            <div class="plank wood w-greige" title="Diamond Head Greige"></div>
+            <div class="plank wood w-koa" title="Island Koa"></div>
+            <div class="plank wood w-smoke" title="Lava Smoke Oak"></div>
+            <div class="plank wood w-walnut" title="Mānoa Walnut"></div>
+          </div>
         </div>
+        <span class="stamp" aria-hidden="true"><i>诚</i><i>信</i></span>
         <span class="tag">Replace with showroom photo</span>
       </div>
-      <figcaption><span>The sample wall</span><span>8 styles in stock · 619 Mapunapuna St</span></figcaption>
+      <figcaption><span>Flooring to go · same day delivery</span><span>8 styles in stock · 619 Mapunapuna St</span></figcaption>
     </figure>
   </div>
 </section>
@@ -623,7 +675,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <section id="flooring">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">In the warehouse now</p>
+      <p class="eyebrow">In the warehouse now<span class="zh">现货地板</span></p>
       <h2>Floors you can take home today</h2>
       <p class="lede">We carry vinyl plank, laminate, hardwood, tile and carpet for homes and commercial jobs. Vinyl plank is $3.99 / sq ft retail, always in stock, with no mixed batches. Boxes are sold whole.</p>
     </div>
@@ -827,7 +879,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
   <div class="wrap">
     <div>
       <div class="sec-head">
-        <p class="eyebrow">Transparent installation pricing</p>
+        <p class="eyebrow">Transparent installation pricing<span class="zh">明码标价</span></p>
         <h2>Every price listed. No hidden fees.</h2>
       </div>
       <div style="overflow-x:auto">
@@ -868,7 +920,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <section class="pro" id="contractors">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">H&amp;W Flooring · contractor wholesale</p>
+      <p class="eyebrow">H&amp;W Flooring · contractor wholesale<span class="zh">承包商批发</span></p>
       <h2>Wholesale pricing that grows with your business</h2>
       <p class="lede">Retail is $3.99 / sq ft. DCCA-verified contractors get 30–40% off based on annual purchases, with no surprises on future orders.</p>
     </div>
@@ -915,7 +967,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <section class="svc" id="services">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Remodeling &amp; installation</p>
+      <p class="eyebrow">Remodeling &amp; installation<span class="zh">装修安装</span></p>
       <h2>From one room to the whole house</h2>
     </div>
     <div class="svc-grid">
@@ -951,7 +1003,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">How a remodel works with us</p>
+      <p class="eyebrow">How a remodel works with us<span class="zh">施工流程</span></p>
       <h2>Four steps, no guesswork</h2>
     </div>
     <ol class="steps">
@@ -968,7 +1020,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
   <div class="wrap">
     <div class="crew-top">
       <div class="sec-head" style="margin:0">
-        <p class="eyebrow">Our team</p>
+        <p class="eyebrow">Our team<span class="zh">专业团队</span></p>
         <h2>A family business with a full professional crew</h2>
         <p class="lede">The owners run the company. A full-time team of installers, carpenters and a project manager runs your job. Everyone on site works for us and is trained on the products we sell.</p>
       </div>
@@ -1028,7 +1080,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <section id="projects">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Recent work on Oʻahu</p>
+      <p class="eyebrow">Recent work on Oʻahu<span class="zh">工程案例</span></p>
       <h2>Finished projects</h2>
     </div>
     <div class="proj">
@@ -1050,7 +1102,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
       <p class="ph">Owners + crew photo · in front of the sample wall</p>
     </div>
     <div>
-      <p class="eyebrow">Locally owned · Honolulu</p>
+      <p class="eyebrow">Locally owned · Honolulu<span class="zh">关于我们</span></p>
       <h2 style="margin-top:14px">Started by a husband and wife. Built into a team.</h2>
       <p class="lede" style="margin-top:18px">Husband &amp; Wife Construction started with one truck and a wall of flooring samples. Today it's a flooring warehouse and a professional crew serving homes across Oʻahu. We still review every quote and stand behind every job.</p>
       <blockquote>“You get the care of a family business and the speed of a full crew.”</blockquote>
@@ -1068,7 +1120,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 <section class="visit" id="visit">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Showroom &amp; warehouse</p>
+      <p class="eyebrow">Showroom &amp; warehouse<span class="zh">门店地址</span></p>
       <h2 style="margin-top:14px">Come see the sample wall</h2>
       <p class="lede" style="margin-top:18px">In-store shopping, in-store pickup and white-glove delivery. Bring a room photo and your measurements and we'll help you pick.</p>
       <dl class="hours" id="hours">
@@ -1120,6 +1172,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 
 <footer>
   <div class="wrap">
+    <span class="mark seal foot-seal" aria-hidden="true"><i>夫</i><i>同</i><i>妻</i><i>心</i></span>
     <span>© 2026 Husband &amp; Wife Construction LLC · 619 Mapunapuna St, Honolulu, HI 96819 · (808) 766-0425</span>
     <span>HI Contractor Lic. # [C-XXXXX] · Licensed &amp; insured</span>
   </div>
