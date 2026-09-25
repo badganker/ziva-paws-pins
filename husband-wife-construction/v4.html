@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Husband &amp; Wife Construction · Draft 4</title>
+<meta name="description" content="H&amp;W Flooring by Husband &amp; Wife Construction, Honolulu. Vinyl plank from $3.99/sq ft, $3/sq ft installation, contractor wholesale pricing, same-day delivery. 619 Mapunapuna St · (808) 766-0425.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Husband &amp; Wife Construction · H&amp;W Flooring Honolulu">
+<meta property="og:description" content="Flooring in stock from $3.99/sq ft, transparent $3/sq ft installation, 2-year warranty. Open to the public, no appointment needed.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111111'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='24' fill='white' text-anchor='middle'%3EH%26amp;W%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Husband & Wife Construction LLC","alternateName":"H&W Flooring",
+ "telephone":"+1-808-766-0425","priceRange":"$$",
+ "address":{"@type":"PostalAddress","streetAddress":"619 Mapunapuna St","addressLocality":"Honolulu","addressRegion":"HI","postalCode":"96819","addressCountry":"US"},
+ "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:30","closes":"17:30"}],
+ "paymentAccepted":"Credit Card, Zelle, Venmo","areaServed":"Oahu, Hawaii"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap">
+<style>
+/* ============ Design tokens · Draft 4 "Gallery" ============
+   Pure white, black type, hairlines. The wood is the only color.
+*/
+:root{
+  color-scheme: light;
+  --ground:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-2:#F5F4F1;
+  --ink:#111111;
+  --ink-2:#555555;
+  --ink-3:#8C8C8C;
+  --line:#E6E4E0;
+  --basalt:#111111;
+  --on-basalt:#FFFFFF;
+  --oak:#C8A77A;
+  --rust:#111111;
+  --rust-ink:#FFFFFF;
+  --accent-text:#111111;
+  --reef:#111111;
+  --ok:#3F7A57;
+  --shadow:none;
+  --display:"Jost","Futura","Century Gothic","Avenir Next",sans-serif;
+  --body:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+  --mono:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+  --r:0px;
+  --max:1240px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --ground:#0E0E0E;--surface:#0E0E0E;--surface-2:#181818;
+    --ink:#F2F2F0;--ink-2:#B0B0AC;--ink-3:#7E7E7A;--line:#2A2A28;
+    --basalt:#F2F2F0;--on-basalt:#0E0E0E;
+    --oak:#D2B488;--rust:#F2F2F0;--rust-ink:#0E0E0E;--accent-text:#F2F2F0;--reef:#F2F2F0;--ok:#7DBF95;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --ground:#0E0E0E;--surface:#0E0E0E;--surface-2:#181818;
+  --ink:#F2F2F0;--ink-2:#B0B0AC;--ink-3:#7E7E7A;--line:#2A2A28;
+  --basalt:#F2F2F0;--on-basalt:#0E0E0E;
+  --oak:#D2B488;--rust:#F2F2F0;--rust-ink:#0E0E0E;--accent-text:#F2F2F0;--reef:#F2F2F0;--ok:#7DBF95;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--reef)}
+:focus-visible{outline:2px solid var(--reef);outline-offset:3px;border-radius:3px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+h3{font-size:1.6rem}
+p{margin:0}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.lede{color:var(--ink-2);max-width:60ch;font-size:1.06rem}
+section{padding-block:clamp(56px,8vw,104px)}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px)}
+
+.btn{display:inline-flex;align-items:center;gap:.5em;font:600 .95rem/1 var(--body);padding:.95em 1.4em;border-radius:99px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-rust{background:var(--rust);color:var(--rust-ink)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn svg{width:18px;height:18px}
+
+/* ============ Top strip + nav ============ */
+.strip{background:var(--basalt);color:var(--on-basalt);font:500 .78rem/1 var(--mono);letter-spacing:.04em}
+.strip .wrap{display:flex;gap:18px;justify-content:space-between;align-items:center;padding-block:10px;flex-wrap:wrap}
+.strip .open{color:#A9D9A6}
+.strip .open::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-right:7px;vertical-align:1px}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:24px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.mark{width:42px;height:42px;border-radius:12px;background:var(--rust);color:#fff;display:grid;place-items:center;font:800 1.05rem/1 var(--display);letter-spacing:-.03em}
+.logo b{font:700 1.2rem/1.05 var(--display);letter-spacing:-.02em;display:block}
+.logo small{font:500 .66rem/1 var(--mono);letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
+.nav ul a:hover{color:var(--ink)}
+@media (max-width:900px){.nav ul{display:none}.nav .btn{margin-left:auto}}
+@media (max-width:480px){.nav .btn{display:none}.nav .menu-btn{margin-left:auto}}
+
+/* ============ Hero ============ */
+.hero{padding-block:clamp(40px,6vw,72px) clamp(48px,7vw,88px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.5rem);font-weight:800;line-height:.98;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--accent-text)}
+.hero .lede{margin-top:22px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.facts div{font:500 .82rem/1.3 var(--mono);color:var(--ink-2)}
+.facts strong{display:block;font:700 1.6rem/1 var(--display);color:var(--ink);margin-bottom:4px}
+
+/* The container wall: rust corrugation with hanging plank samples */
+.wall{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:5/4;max-width:100%;
+  background:
+    repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 3px,rgba(255,255,255,.07) 3px 9px,rgba(0,0,0,.1) 9px 22px),
+    linear-gradient(180deg,#B0532C,#8E3F21 70%,#6A2E18);
+  box-shadow:var(--shadow);padding:9% 6% 0;display:flex;flex-direction:column}
+.banner{align-self:center;background:#FFF8EE;color:#B6452A;font:800 clamp(.95rem,2.4vw,1.5rem)/1.05 var(--display);text-transform:uppercase;letter-spacing:.04em;border-radius:4px;padding:.55em 1.1em;transform:rotate(-2deg);box-shadow:0 6px 14px rgba(0,0,0,.3);text-align:center}
+.banner span{display:block;font-size:.72em;color:#7a1d17;letter-spacing:.1em}
+.planks{margin-top:auto;display:flex;gap:2.2%;align-items:flex-end;height:58%}
+.plank{flex:1;height:100%;border-radius:2px 2px 0 0;position:relative;box-shadow:0 8px 16px rgba(0,0,0,.35);transform-origin:top center;animation:sway 5s ease-in-out infinite}
+.plank:nth-child(2n){animation-delay:-1.3s;height:92%}
+.plank:nth-child(3n){animation-delay:-2.4s;height:96%}
+.plank::after{content:"";position:absolute;top:6%;left:50%;width:36%;height:9%;transform:translateX(-50%);background:#fff;opacity:.9;border-radius:1px}
+@keyframes sway{0%,100%{transform:rotate(-.6deg)}50%{transform:rotate(.6deg)}}
+.wall .tag{position:absolute;left:14px;bottom:14px;background:rgba(15,16,16,.78);color:#fff;font:500 .72rem/1 var(--mono);padding:8px 10px;border-radius:4px;letter-spacing:.04em}
+
+/* Wood grain generator – used by planks & swatches */
+.wood{background:
+  repeating-linear-gradient(90deg,transparent 0 7px,rgba(0,0,0,.05) 7px 8px,transparent 8px 19px,rgba(255,255,255,.06) 19px 20px),
+  repeating-linear-gradient(88deg,transparent 0 31px,rgba(0,0,0,.07) 31px 33px),
+  linear-gradient(90deg,var(--w1),var(--w2) 45%,var(--w1) 70%,var(--w2))}
+.w-natural{--w1:#D9B98A;--w2:#C9A472}
+.w-honey{--w1:#C58F52;--w2:#B27A40}
+.w-greige{--w1:#B9ADA0;--w2:#A69A8C}
+.w-ash{--w1:#E1D7C8;--w2:#D2C6B4}
+.w-walnut{--w1:#6E4B32;--w2:#5B3C27}
+.w-smoke{--w1:#7E7870;--w2:#6C665E}
+.w-koa{--w1:#9A5B34;--w2:#874C29}
+.w-drift{--w1:#CFC3AE;--w2:#BFB29B}
+
+/* ============ Two paths ============ */
+.paths{padding-block:0}
+.paths .wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.paths .wrap{grid-template-columns:1fr}}
+.path{display:grid;gap:14px;padding:clamp(24px,3.4vw,40px);border-radius:20px;text-decoration:none;color:inherit;position:relative;overflow:hidden}
+.path.buy{background:var(--basalt);color:var(--on-basalt)}
+.path.build{background:var(--surface);border:1px solid var(--line)}
+.path h3{font-size:clamp(1.8rem,3.2vw,2.5rem)}
+.path p{opacity:.8;max-width:42ch}
+.path ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.path li{font:500 .76rem/1 var(--mono);padding:7px 10px;border-radius:99px;border:1px solid currentColor;opacity:.75}
+.path .go{font-weight:600;display:inline-flex;align-items:center;gap:8px;margin-top:6px}
+.path .go svg{width:18px;transition:transform .2s}
+.path:hover .go svg{transform:translateX(4px)}
+
+/* ============ Flooring catalog ============ */
+.cat-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 .85rem/1 var(--body);padding:10px 14px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.cat-note{font:400 .8rem/1.4 var(--mono);color:var(--ink-3)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:1020px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.grid{grid-template-columns:1fr}.prod .sw{aspect-ratio:16/7}}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.prod .sw{aspect-ratio:4/3;position:relative}
+.prod .sw .badge{position:absolute;top:10px;left:10px;font:600 .7rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-radius:3px;background:rgba(255,255,255,.92);color:#1F2120}
+.prod .body{padding:16px;display:grid;gap:10px;flex:1;align-content:start}
+.prod h4{margin:0;font:600 1.05rem/1.25 var(--body)}
+.prod .line{font:500 .72rem/1 var(--mono);color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;font:400 .78rem/1.3 var(--mono);color:var(--ink-2);margin:0}
+.specs dt{color:var(--ink-3)}
+.specs dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.prod .foot{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-top:1px solid var(--line);margin-top:auto}
+.price{font:700 1.45rem/1 var(--display);letter-spacing:-.02em}
+.price small{font:400 .75rem var(--mono);color:var(--ink-3)}
+.stock{font:500 .74rem/1.3 var(--mono);color:var(--ok);text-align:right;white-space:nowrap}
+.stock.low{color:var(--accent-text)}
+
+/* Coverage calculator */
+.calc{margin-top:28px;display:grid;grid-template-columns:1.1fr 1fr;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+@media (max-width:820px){.calc{grid-template-columns:1fr}}
+.calc .in{padding:clamp(20px,3vw,32px);display:grid;gap:16px}
+.calc .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:480px){.calc .row{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font:500 .78rem/1 var(--mono);color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase}
+input,select,textarea{font:500 1rem/1.3 var(--body);color:var(--ink);background:var(--ground);border:1px solid var(--line);border-radius:var(--r);padding:12px;width:100%;min-width:0}
+textarea{min-height:96px;resize:vertical}
+.calc .out{background:var(--basalt);color:var(--on-basalt);padding:clamp(20px,3vw,32px);display:grid;gap:16px;align-content:center}
+.calc .big{font:800 clamp(3rem,7vw,4.6rem)/.9 var(--display);letter-spacing:-.04em}
+.calc .big small{font:500 .9rem var(--mono);opacity:.7;margin-left:6px}
+.calc dl{display:grid;grid-template-columns:1fr auto;gap:8px 16px;margin:0;font:400 .85rem/1.3 var(--mono)}
+.calc dt{opacity:.7}.calc dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+
+/* Price tier switch */
+.tier{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:6px;border-radius:99px;background:var(--surface-2);width:fit-content;max-width:100%}
+.tier button{font:600 .82rem/1 var(--body);padding:9px 13px;border-radius:99px;border:0;background:transparent;color:var(--ink-2);cursor:pointer}
+.tier button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.tier-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;margin-bottom:14px}
+.tier-row .cat-note b{color:var(--ink-2)}
+.price{white-space:nowrap}
+.price s{display:block;font:400 .74rem/1.4 var(--mono);color:var(--ink-3);margin-top:4px}
+.calc .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:480px){.calc .checks{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font:500 .9rem/1.3 var(--body);color:var(--ink);padding:12px;border:1px solid var(--line);border-radius:12px;cursor:pointer;background:var(--ground)}
+.check input{width:18px;height:18px;margin:1px 0 0;flex:none;accent-color:var(--accent-text);padding:0}
+.check small{display:block;font:400 .74rem/1.3 var(--mono);color:var(--ink-3);margin-top:3px}
+.calc dl .total{font-weight:600;border-top:1px solid color-mix(in srgb,var(--on-basalt) 20%,transparent);padding-top:10px;margin-top:4px}
+.calc .fine{font:400 .74rem/1.4 var(--mono);opacity:.65}
+
+/* ============ Install pricing ============ */
+.pricing .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+@media (max-width:900px){.pricing .wrap{grid-template-columns:1fr}}
+.ptable{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.ptable th,.ptable td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable tr:last-child td{border-bottom:0}
+.ptable thead th{font:500 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2)}
+.ptable td:first-child{font-weight:600;width:34%}
+.ptable .amt{font:700 1.3rem/1 var(--display);letter-spacing:-.02em;color:var(--accent-text);white-space:nowrap}
+.ptable .det{display:block;color:var(--ink-2);font-size:.9rem;margin-top:6px}
+.side{display:grid;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:10px}
+.card.free{background:var(--rust);color:#fff;border-color:transparent}
+.card.free .eyebrow{color:rgba(255,255,255,.8)}
+.card h3{font-size:1.45rem}
+.card ul{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.92rem;color:var(--ink-2)}
+.card .no{color:var(--ink-3)}
+
+/* ============ Contractors ============ */
+.pro{background:var(--surface);border-block:1px solid var(--line)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:820px){.tiers{grid-template-columns:1fr}}
+.tier-card{border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:10px;align-content:start;background:var(--ground)}
+.tier-card.top{background:var(--basalt);color:var(--on-basalt);border-color:transparent}
+.tier-card .off{font:800 clamp(2.6rem,5vw,3.4rem)/.9 var(--display);letter-spacing:-.04em;color:var(--accent-text)}
+.tier-card.top .off{color:var(--oak)}
+.tier-card .off small{font:600 1rem var(--body);letter-spacing:0;margin-left:4px}
+.tier-card .range{font:500 .82rem/1.3 var(--mono);opacity:.8}
+.tier-card .net{font-weight:600}
+.tier-card .dep{font-size:.88rem;opacity:.85;padding-top:10px;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}
+.pro-foot{margin-top:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(20px,4vw,48px);align-items:start}
+@media (max-width:860px){.pro-foot{grid-template-columns:1fr}}
+.commit{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.commit{grid-template-columns:1fr}}
+.commit li{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.commit svg{flex:none;width:20px;height:20px;color:var(--ok);margin-top:2px}
+.verify{font-size:.92rem;color:var(--ink-2);display:grid;gap:14px}
+
+/* ============ Services ============ */
+.svc{background:var(--surface);border-block:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+@media (max-width:980px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.svc-grid{grid-template-columns:1fr}}
+.svc-item{padding:28px 24px 28px 0;display:grid;gap:12px;align-content:start;border-bottom:1px solid var(--line)}
+.svc-item + .svc-item{padding-left:24px;border-left:1px solid var(--line)}
+@media (max-width:980px){.svc-item:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:520px){.svc-item + .svc-item{border-left:0;padding-left:0}}
+.svc-item svg{width:34px;height:34px;color:var(--accent-text)}
+.svc-item p{color:var(--ink-2);font-size:.95rem}
+.svc-item .from{font:500 .76rem/1 var(--mono);color:var(--ink-3)}
+
+/* ============ Process ============ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;display:grid;gap:10px;padding:22px;border-radius:16px;background:var(--surface);border:1px solid var(--line);align-content:start}
+.steps li::before{content:"Step " counter(s);font:500 .74rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text)}
+.steps h3{font-size:1.5rem}
+.steps p{color:var(--ink-2);font-size:.95rem}
+.steps .when{font:400 .78rem/1 var(--mono);color:var(--ink-3)}
+
+/* ============ Projects ============ */
+.proj{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px;gap:14px}
+@media (max-width:820px){.proj{grid-template-columns:1fr 1fr;grid-auto-rows:180px}}
+.shot{border-radius:16px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14px}
+.shot.tall{grid-row:span 2}
+@media (max-width:820px){.shot.tall{grid-column:span 2;grid-row:span 1}}
+.shot .cap{background:rgba(15,16,16,.82);color:#fff;padding:9px 11px;border-radius:4px;font:500 .78rem/1.35 var(--mono)}
+.shot .cap b{display:block;font:600 .9rem var(--body)}
+/* room-like placeholders: floor in perspective + wall */
+.room{background:
+  linear-gradient(180deg,var(--wall,#E9E6E0) 0 48%,transparent 48%),
+  repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 54px),
+  linear-gradient(90deg,var(--w1),var(--w2),var(--w1))}
+.proj-note{margin-top:14px;font:400 .8rem/1.4 var(--mono);color:var(--ink-3)}
+
+/* ============ Crew ============ */
+.crew{background:var(--basalt);color:var(--on-basalt)}
+.crew .eyebrow{color:var(--oak)}
+.crew .lede{color:color-mix(in srgb,var(--on-basalt) 78%,transparent)}
+.crew-top{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,64px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+@media (max-width:860px){.crew-top{grid-template-columns:1fr}}
+.crew-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.crew-stats div{padding:18px;border-radius:16px;background:color-mix(in srgb,var(--on-basalt) 7%,transparent)}
+.crew-stats strong{display:block;font:800 2.2rem/1 var(--display);letter-spacing:-.03em;color:var(--oak);margin-bottom:6px}
+.crew-stats span{font:500 .78rem/1.3 var(--mono);opacity:.8}
+.roles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:980px){.roles{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.roles{grid-template-columns:1fr}}
+.role{background:var(--surface);color:var(--ink);border-radius:18px;padding:22px;display:grid;gap:10px;align-content:start}
+.role .ico{width:44px;height:44px;border-radius:12px;background:var(--surface-2);display:grid;place-items:center;color:var(--accent-text)}
+.role .ico svg{width:24px;height:24px}
+.role h3{font-size:1.25rem}
+.role p{color:var(--ink-2);font-size:.92rem}
+.role .n{font:500 .74rem/1 var(--mono);color:var(--ok)}
+.promise{margin-top:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(20px,4vw,48px);align-items:start}
+@media (max-width:860px){.promise{grid-template-columns:1fr}}
+.promise ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.promise li{display:flex;gap:12px;align-items:flex-start}
+.promise li svg{flex:none;width:22px;height:22px;color:var(--oak);margin-top:2px}
+.promise li b{display:block}
+.promise li span{opacity:.75;font-size:.92rem}
+.timeline{background:color-mix(in srgb,var(--on-basalt) 7%,transparent);border-radius:18px;padding:22px}
+.timeline h3{font-size:1.2rem;margin-bottom:4px}
+.timeline .sub{font:400 .78rem/1.4 var(--mono);opacity:.7;margin-bottom:16px}
+.tl-row{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;margin-top:10px}
+.tl-row b{font:500 .78rem/1 var(--mono);opacity:.8}
+.tl-bar{min-height:32px;border-radius:8px;display:flex;align-items:center;padding:6px 10px;font:500 .8rem/1.25 var(--body);color:#2E2520}
+
+/* ============ About ============ */
+.about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr}}
+.duo{aspect-ratio:1;max-width:100%;border-radius:24px;background:var(--surface-2);position:relative;overflow:hidden;display:grid;place-items:center}
+.duo svg{width:62%;color:var(--ink-3)}
+.duo .ph{position:absolute;bottom:14px;left:14px;right:14px;font:400 .78rem/1.4 var(--mono);color:var(--ink-3);text-align:center}
+.about blockquote{margin:24px 0 0;padding:0;font:600 clamp(1.3rem,2.4vw,1.7rem)/1.3 var(--body);max-width:32ch}
+.about .sig{margin-top:14px;font:500 .82rem/1 var(--mono);color:var(--ink-3)}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+@media (max-width:520px){.vals{grid-template-columns:1fr}}
+.vals div{padding-top:12px;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink-2)}
+.vals b{display:block;color:var(--ink);font-weight:600;margin-bottom:4px}
+
+/* ============ Visit / estimate ============ */
+.visit{background:var(--basalt);color:var(--on-basalt)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,64px)}
+@media (max-width:860px){.visit .wrap{grid-template-columns:1fr}}
+.visit .eyebrow{color:var(--oak)}
+.visit .form .eyebrow{color:var(--ink-3)}
+.visit .lede{color:color-mix(in srgb,var(--on-basalt) 75%,transparent)}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;margin:28px 0 0;font:400 .92rem/1.3 var(--mono)}
+.hours dd{margin:0;font-variant-numeric:tabular-nums}
+.hours .today{color:var(--oak)}
+.contact{display:grid;gap:10px;margin-top:28px}
+.contact .row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 0;border-top:1px solid color-mix(in srgb,var(--on-basalt) 16%,transparent);flex-wrap:wrap}
+.contact .row span{font:500 .75rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.contact .row b{font-weight:500;user-select:all}
+.form{background:var(--surface);color:var(--ink);border-radius:20px;padding:clamp(22px,3vw,34px);display:grid;gap:16px;align-content:start;align-self:start}
+.form h3{font-size:2rem}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.form .two{grid-template-columns:1fr}}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label{text-transform:none;letter-spacing:0;font:500 .9rem/1 var(--body);color:var(--ink-2);padding:10px 14px;border:1px solid var(--line);border-radius:99px;cursor:pointer;display:inline-block}
+.seg input:checked + label{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.seg input:focus-visible + label{outline:2px solid var(--reef);outline-offset:2px}
+.form .ok{font:500 .9rem/1.4 var(--body);color:var(--ok)}
+
+footer{padding-block:36px 110px;font:400 .8rem/1.6 var(--mono);color:var(--ink-3)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+@media (min-width:761px){footer{padding-bottom:36px}}
+
+/* ============ Mobile refinements ============ */
+.swipe-hint{display:none;font:400 .76rem/1 var(--mono);color:var(--ink-3);margin:-4px 0 10px}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);place-items:center;cursor:pointer;flex:none}
+.menu-btn svg{width:22px;height:22px}
+.mobile-menu{display:grid;border-top:1px solid var(--line);padding:8px clamp(16px,4vw,32px) 14px}
+.mobile-menu a{padding:12px 0;color:var(--ink);text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.mobile-menu a:last-child{border-bottom:0}
+@media (max-width:900px){.menu-btn{display:grid}.nav .wrap{gap:12px}}
+@media (min-width:901px){.mobile-menu{display:none!important}}
+@media (max-width:640px){
+  .strip-more{display:none}
+  .strip .wrap{justify-content:center}
+  .hero .ctas .btn{flex:1 1 100%;justify-content:center}
+  /* catalog becomes a swipeable row */
+  .grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(-1 * clamp(16px,4vw,32px));padding:4px clamp(16px,4vw,32px) 14px;scrollbar-width:none}
+  .grid::-webkit-scrollbar{display:none}
+  .prod{flex:0 0 78%;scroll-snap-align:start}
+  .prod .sw{aspect-ratio:16/9}
+  .swipe-hint{display:block}
+  .tier{width:100%}
+  .tier button{flex:1;padding:9px 6px}
+  .calc .row{grid-template-columns:1fr 1fr}
+  .calc .row label:last-child{grid-column:1/-1}
+  .ptable thead{display:none}
+  .ptable tr{display:block;border-bottom:1px solid var(--line)}
+  .ptable tr:last-child{border-bottom:0}
+  .ptable td{display:block;border-bottom:0;width:auto!important;padding:14px 18px 0}
+  .ptable td + td{padding:6px 18px 16px}
+  .crew-stats strong{font-size:1.8rem}
+}
+
+
+/* Mobile action bar – mirrors Call / Directions / Text on the Google profile */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;grid-template-columns:repeat(4,1fr);background:var(--surface);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))}
+.dock a{display:grid;justify-items:center;gap:4px;font:600 .72rem/1 var(--body);color:var(--ink-2);text-decoration:none;padding:6px 0}
+.dock a svg{width:22px;height:22px}
+.dock a.hot{color:var(--accent-text)}
+@media (max-width:760px){.dock{display:grid}}
+
+.ph-note{display:inline-block;font:500 .7rem/1 var(--mono);color:var(--accent-text);border:1px dashed currentColor;padding:3px 6px;border-radius:3px;vertical-align:middle;margin-left:6px}
+
+/* ============ Draft 4 overrides: minimal gallery ============ */
+body{font-weight:400;letter-spacing:.01em}
+section{padding-block:clamp(72px,10vw,140px)}
+h1,h2,h3{font-family:var(--display);font-weight:300;letter-spacing:-.01em;line-height:1.05}
+h2{font-size:clamp(2.1rem,4.4vw,3.6rem)}
+.hero h1{font-weight:300;font-size:clamp(2.8rem,6vw,5.4rem);letter-spacing:-.025em}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--ink)}
+.svc-item h3,.role h3,.steps h3,.card h3,.prod h4,.timeline h3,.path h3,.form h3,.calc h3{font-weight:400}
+.eyebrow,.cat-note,.specs,.line,.stock,.facts div,.strip,.hours,label,.calc dl,.calc .fine,.tier-card .range,.from,.when,.n,.proj-note,footer,.logo small,.ph,.shot .cap,.contact .row span,.timeline .sub,.tl-row b,.crew-stats span,.swipe-hint{font-family:var(--body);letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;font-weight:500}
+.specs,.calc dl,.hours{letter-spacing:.06em}
+.eyebrow{color:var(--ink-3)}
+.btn{border-radius:0;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;padding:1.25em 2em}
+.btn:hover{transform:none;opacity:.85}
+.btn-line{border-width:1px}
+.mark{border-radius:0;background:transparent;color:var(--ink);border:1px solid var(--ink);font-family:var(--display);font-weight:400;font-size:.9rem}
+.logo b{font-family:var(--display);font-weight:400;letter-spacing:.2em;text-transform:uppercase;font-size:1rem}
+.nav ul a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+header.nav{background:color-mix(in srgb,var(--ground) 94%,transparent)}
+.strip{background:var(--ground);color:var(--ink-2);border-bottom:1px solid var(--line)}
+.strip .open{color:var(--ok)}
+/* flat surfaces, hairlines, no radius */
+.path,.prod,.calc,.shot,.form,.role,.tier-card,.card,.ptable,.steps li,.timeline,.crew-stats div,.duo,.check,.tl-bar,.wall,.chip,.tier,.tier button,.path li,.menu-btn,.role .ico,input,select,textarea,.seg label{border-radius:0!important;box-shadow:none!important}
+.chip,.seg label{letter-spacing:.08em;text-transform:uppercase;font-size:.72rem}
+.tier{background:transparent;border:1px solid var(--line);padding:4px}
+.tier button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+input,select,textarea{background:transparent;border:0;border-bottom:1px solid var(--ink-3);padding:12px 0}
+.check{background:transparent}
+/* hero: white gallery with the samples as the only color */
+.hero{padding-block:clamp(48px,7vw,96px)}
+.wall{background:var(--surface-2);padding:10% 8% 0}
+.wall .banner{background:transparent;color:var(--ink);box-shadow:none;transform:none;font-family:var(--display);font-weight:400;letter-spacing:.3em;font-size:clamp(.8rem,1.6vw,1rem);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);border-radius:0;padding:.9em 1.4em}
+.wall .banner span{color:var(--ink-3);letter-spacing:.3em;margin-top:6px}
+.plank{box-shadow:0 20px 30px -18px rgba(0,0,0,.35);animation:none}
+.plank::after{display:none}
+.wall .tag{background:var(--ground);color:var(--ink-2)}
+.facts strong{font-family:var(--display);font-weight:300;font-size:2rem}
+/* light sections instead of dark blocks */
+.crew,.visit{--basalt:var(--surface-2);--on-basalt:var(--ink);background:var(--surface-2);color:var(--ink)}
+.crew .eyebrow,.visit .eyebrow,.crew-stats strong,.hours .today,.promise li svg{color:var(--ink)}
+.crew .role,.visit .form{background:var(--ground)}
+.tl-bar{color:#111}
+.path.buy,.calc .out,.tier-card.top,.card.free{background:var(--ink);color:var(--ground)}
+.path.buy .eyebrow,.calc .out .eyebrow,.card.free .eyebrow{color:color-mix(in srgb,var(--ground) 60%,transparent)!important}
+.calc .out .big,.price,.tier-card .off,.ptable .amt,.crew-stats strong{font-family:var(--display);font-weight:300;letter-spacing:-.02em}
+.tier-card .off small{font-weight:400;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem}
+.tier-card.top .off{color:var(--oak)}
+.card.free .btn{background:var(--ground)!important;color:var(--ink)!important}
+.sec-head{gap:18px}
+.svc{background:var(--ground)}
+.pro{background:var(--ground)}
+.about{background:var(--ground)!important}
+.dock{background:var(--ground)}
+.dock a.hot{color:var(--ink)}
+.ph-note{color:var(--ink-3)}
+.badge{letter-spacing:.14em!important}
+</style>
+</head>
+<body>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="open" id="openNow">Open Mon – Sat · 7:30 AM – 5:30 PM</span>
+    <span class="strip-more">Open to the public · no appointment needed · (808) 766-0425</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Husband &amp; Wife Construction home">
+      <span class="mark">H&amp;W</span>
+      <span><b>Husband &amp; Wife</b><small>Construction · Honolulu</small></span>
+    </a>
+    <ul>
+      <li><a href="#flooring">Flooring</a></li>
+      <li><a href="#pricing">Install pricing</a></li>
+      <li><a href="#contractors">Contractors</a></li>
+      <li><a href="#services">Remodeling</a></li>
+      <li><a href="#crew">Our team</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-rust" href="#estimate">Free estimate</a>
+    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#flooring">Flooring</a><a href="#pricing">Install pricing</a><a href="#contractors">Contractors</a>
+    <a href="#services">Remodeling</a><a href="#crew">Our team</a><a href="#projects">Projects</a><a href="#visit">Visit &amp; hours</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Flooring wholesale &amp; retail + remodeling · Māpunapuna, Honolulu</p>
+      <h1 style="margin-top:16px">Family-owned.<br><em>Crew-built.</em><br>Done on time.</h1>
+      <p class="lede">Waterproof LVP and SPC flooring in stock for same-day pickup or delivery. When you need it installed, our full-time crew of trained installers and carpenters gets it done right and on schedule, with the owners checking every job.</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="#flooring">Shop in-stock flooring
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#estimate">Get a remodel quote</a>
+      </div>
+      <div class="facts">
+        <div><strong>$3.99</strong>/ sq ft retail flooring</div>
+        <div><strong>$3</strong>/ sq ft installation</div>
+        <div><strong>2-year</strong>install warranty</div>
+      </div>
+    </div>
+
+    <div class="wall" role="img" aria-label="Plank samples hanging on the rust-red container wall outside the showroom, under a banner reading Flooring To Go, Same Day Delivery">
+      <div class="banner">Flooring to go<span>Same day delivery</span></div>
+      <div class="planks">
+        <div class="plank wood w-ash"></div>
+        <div class="plank wood w-natural"></div>
+        <div class="plank wood w-drift"></div>
+        <div class="plank wood w-honey"></div>
+        <div class="plank wood w-greige"></div>
+        <div class="plank wood w-koa"></div>
+        <div class="plank wood w-smoke"></div>
+        <div class="plank wood w-walnut"></div>
+      </div>
+      <span class="tag">Replace with storefront photo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO PATHS ============ -->
+<section class="paths" aria-label="Choose what you need">
+  <div class="wrap">
+    <a class="path buy" href="#flooring">
+      <span class="eyebrow" style="color:var(--oak)">Wholesale &amp; retail · contractors welcome</span>
+      <h3>I'm buying flooring</h3>
+      <p>$3.99 / sq ft retail, and 30–40% off for DCCA-verified contractors. Walk in, no appointment needed, and get it delivered the same day.</p>
+      <ul><li>Vinyl plank</li><li>Laminate</li><li>Hardwood</li><li>Tile</li><li>Carpet</li><li>Cabinets</li><li>Countertops</li></ul>
+      <span class="go">See in-stock floors <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="path build" href="#services">
+      <span class="eyebrow">Licensed contractor · in-house crew</span>
+      <h3>I need it built</h3>
+      <p>Flooring installs, kitchen cabinets, bathrooms and full remodels. One project manager, our own crew, and a start and finish date in writing.</p>
+      <ul><li>Install</li><li>Cabinets</li><li>Bathrooms</li><li>Whole home</li></ul>
+      <span class="go" style="color:var(--accent-text)">Start a free estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FLOORING ============ -->
+<section id="flooring">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">In the warehouse now</p>
+      <h2>Floors you can take home today</h2>
+      <p class="lede">We carry vinyl plank, laminate, hardwood, tile and carpet for homes and commercial jobs. Vinyl plank is $3.99 / sq ft retail, always in stock, with no mixed batches. Boxes are sold whole.</p>
+    </div>
+
+    <div class="cat-bar">
+      <div class="chips" role="group" aria-label="Filter flooring">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-f="spc" aria-pressed="false">SPC rigid core</button>
+        <button class="chip" type="button" data-f="lvp" aria-pressed="false">Glue-down LVP</button>
+        <button class="chip" type="button" data-f="light" aria-pressed="false">Light tones</button>
+        <button class="chip" type="button" data-f="dark" aria-pressed="false">Dark tones</button>
+      </div>
+      <p class="cat-note">Styles shown are examples <span class="ph-note">placeholder</span></p>
+    </div>
+    <div class="tier-row">
+      <div class="tier" role="group" aria-label="Show prices for">
+        <button type="button" data-d="0" aria-pressed="true">Retail</button>
+        <button type="button" data-d="0.30" aria-pressed="false">−30%</button>
+        <button type="button" data-d="0.35" aria-pressed="false">−35%</button>
+        <button type="button" data-d="0.40" aria-pressed="false">−40%</button>
+      </div>
+      <p class="cat-note">−30/35/40% = contractor pricing for <b>DCCA-verified contractors</b> · <a href="#contractors">see tiers</a></p>
+    </div>
+
+    <p class="swipe-hint">Swipe to see all styles →</p>
+    <div class="grid" id="grid">
+    <article class="prod">
+      <div class="sw wood w-natural"><span class="badge">Best seller</span></div>
+      <div class="body">
+        <span class="line">SPC rigid core</span>
+        <h4>Makai Natural Oak</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>7" × 48"</dd>
+          <dt>Thickness</dt><dd>6.5 mm</dd>
+          <dt>Wear layer</dt><dd>20 mil</dd>
+          <dt>Per box</dt><dd>23.64 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock ">In stock<br>1,240 sq ft</span>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="sw wood w-ash"></div>
+      <div class="body">
+        <span class="line">SPC rigid core</span>
+        <h4>Kailua Whitewash</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>9" × 60"</dd>
+          <dt>Thickness</dt><dd>7 mm</dd>
+          <dt>Wear layer</dt><dd>22 mil</dd>
+          <dt>Per box</dt><dd>22.48 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock ">In stock<br>860 sq ft</span>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="sw wood w-greige"><span class="badge">Rental pick</span></div>
+      <div class="body">
+        <span class="line">SPC rigid core</span>
+        <h4>Diamond Head Greige</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>7" × 48"</dd>
+          <dt>Thickness</dt><dd>6.5 mm</dd>
+          <dt>Wear layer</dt><dd>20 mil</dd>
+          <dt>Per box</dt><dd>23.64 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock ">In stock<br>2,100 sq ft</span>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="sw wood w-koa"></div>
+      <div class="body">
+        <span class="line">SPC rigid core</span>
+        <h4>Island Koa</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>9" × 60"</dd>
+          <dt>Thickness</dt><dd>8 mm</dd>
+          <dt>Wear layer</dt><dd>22 mil</dd>
+          <dt>Per box</dt><dd>22.48 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock low">Low stock<br>140 sq ft</span>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="sw wood w-honey"></div>
+      <div class="body">
+        <span class="line">Glue-down LVP</span>
+        <h4>Honey Hickory</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>6" × 36"</dd>
+          <dt>Thickness</dt><dd>3 mm</dd>
+          <dt>Wear layer</dt><dd>12 mil</dd>
+          <dt>Per box</dt><dd>36 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock ">In stock<br>1,800 sq ft</span>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="sw wood w-drift"></div>
+      <div class="body">
+        <span class="line">Glue-down LVP</span>
+        <h4>Driftwood Linen</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>6" × 36"</dd>
+          <dt>Thickness</dt><dd>3 mm</dd>
+          <dt>Wear layer</dt><dd>12 mil</dd>
+          <dt>Per box</dt><dd>36 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock ">In stock<br>950 sq ft</span>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="sw wood w-smoke"></div>
+      <div class="body">
+        <span class="line">SPC rigid core</span>
+        <h4>Lava Smoke Oak</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>7" × 48"</dd>
+          <dt>Thickness</dt><dd>6.5 mm</dd>
+          <dt>Wear layer</dt><dd>20 mil</dd>
+          <dt>Per box</dt><dd>23.64 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock ">In stock<br>620 sq ft</span>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="sw wood w-walnut"></div>
+      <div class="body">
+        <span class="line">Glue-down LVP</span>
+        <h4>Mānoa Walnut</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>7" × 48"</dd>
+          <dt>Thickness</dt><dd>5 mm</dd>
+          <dt>Wear layer</dt><dd>20 mil</dd>
+          <dt>Per box</dt><dd>30 sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$3.99<small>/sq ft</small></span>
+        <span class="stock ">In stock<br>310 sq ft</span>
+      </div>
+    </article></div>
+
+    <!-- Coverage calculator -->
+    <div class="calc" id="calc">
+      <form class="in" id="calcForm">
+        <div>
+          <p class="eyebrow">Material + installation</p>
+          <h3 style="margin-top:8px">Project cost calculator</h3>
+        </div>
+        <label for="c-prod">Floor
+          <select id="c-prod"><option value="oak">Makai Natural Oak (23.64 sq ft/box)</option><option value="ash">Kailua Whitewash (22.48 sq ft/box)</option><option value="greige">Diamond Head Greige (23.64 sq ft/box)</option><option value="koa">Island Koa (22.48 sq ft/box)</option><option value="honey">Honey Hickory (36 sq ft/box)</option><option value="drift">Driftwood Linen (36 sq ft/box)</option><option value="smoke">Lava Smoke Oak (23.64 sq ft/box)</option><option value="walnut">Mānoa Walnut (30 sq ft/box)</option></select>
+        </label>
+        <div class="row">
+          <label for="c-len">Length (ft)<input id="c-len" type="number" min="1" step="0.5" value="14" inputmode="decimal"></label>
+          <label for="c-wid">Width (ft)<input id="c-wid" type="number" min="1" step="0.5" value="12" inputmode="decimal"></label>
+          <label for="c-waste">Overage
+            <select id="c-waste"><option value="0.07">7% · straight</option><option value="0.1" selected>10% · standard</option><option value="0.15">15% · diagonal</option></select>
+          </label>
+        </div>
+        <div class="checks">
+          <label class="check" for="x-inst"><input type="checkbox" id="x-inst" data-rate="3" checked><span>Installation<small>$3 / sq ft</small></span></label>
+          <label class="check" for="x-demo"><input type="checkbox" id="x-demo" data-rate="1"><span>Remove old floor<small>$1 / sq ft</small></span></label>
+          <label class="check" for="x-level"><input type="checkbox" id="x-level" data-rate="1"><span>Floor leveling<small>$1 / sq ft + material at cost</small></span></label>
+          <label class="check" for="x-base"><input type="checkbox" id="x-base" data-rate="1"><span>Baseboards<small>$1 / sq ft</small></span></label>
+          <label class="check" for="x-trash"><input type="checkbox" id="x-trash" data-trip="150"><span>Trash disposal<small>$150 per trip</small></span></label>
+        </div>
+      </form>
+      <div class="out" aria-live="polite">
+        <p class="eyebrow" style="color:var(--oak)">Estimated total</p>
+        <p class="big" id="c-total">$1,259</p>
+        <dl id="c-lines"><dt>Room area</dt><dd>168 sq ft</dd><dt>Flooring · 8 boxes (189.1 sq ft)</dt><dd>$754.59</dd><dt>Installation</dt><dd>$504.00</dd><dt class="total">Total</dt><dd class="total">$1,258.59</dd></dl>
+        <p class="fine">Estimate only. We measure on site for free and give you a full written estimate at no cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTALL PRICING ============ -->
+<section class="pricing" id="pricing" style="padding-top:0">
+  <div class="wrap">
+    <div>
+      <div class="sec-head">
+        <p class="eyebrow">Transparent installation pricing</p>
+        <h2>Every price listed. No hidden fees.</h2>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="ptable">
+          <thead><tr><th scope="col">Service</th><th scope="col">Price &amp; details</th></tr></thead>
+          <tbody>
+            <tr><td>Flooring installation</td><td><span class="amt">$3 / sq ft</span><span class="det">Includes prep, layout, cutting, installation and transitions</span></td></tr>
+            <tr><td>Demo (removal)</td><td><span class="amt">$1 / sq ft</span><span class="det">We remove it all. $1 / sq ft covers carpet, wood, laminate and vinyl. Tile, concrete and drywall removal is priced at your free on-site estimate.</span></td></tr>
+            <tr><td>Floor leveling</td><td><span class="amt">$1 / sq ft</span><span class="det">Plus self-leveling material, charged at cost</span></td></tr>
+            <tr><td>Baseboard installation</td><td><span class="amt">$1 / sq ft</span><span class="det">Includes caulking and basic finish</span></td></tr>
+            <tr><td>Trash disposal</td><td><span class="amt">$150 / trip</span><span class="det">Covers flooring waste only</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="side">
+      <div class="card free">
+        <p class="eyebrow">Always free</p>
+        <h3>Free measurement &amp; free estimate</h3>
+        <p>We measure on site and give you a full written estimate at no cost.</p>
+        <a class="btn" href="#estimate" style="background:#fff;color:#2E2520;justify-self:start">Book a free measure</a>
+      </div>
+      <div class="card">
+        <p class="eyebrow">Peace of mind</p>
+        <h3>Two-year limited warranty</h3>
+        <ul>
+          <li>Installation workmanship</li>
+          <li>Floor movement caused by improper install</li>
+          <li>Transition issues</li>
+        </ul>
+        <p class="no" style="font-size:.85rem">Does not cover water damage, moisture issues or material defects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTRACTORS ============ -->
+<section class="pro" id="contractors">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">H&amp;W Flooring · contractor wholesale</p>
+      <h2>Wholesale pricing that grows with your business</h2>
+      <p class="lede">Retail is $3.99 / sq ft. DCCA-verified contractors get 30–40% off based on annual purchases, with no surprises on future orders.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier-card">
+        <span class="range">Annual purchases $0 – $100,000</span>
+        <span class="off">30%<small>off retail</small></span>
+        <span class="net">$2.79 / sq ft</span>
+        <span class="dep">No deposit required</span>
+      </div>
+      <div class="tier-card">
+        <span class="range">Annual purchases $100,001 – $200,000</span>
+        <span class="off">35%<small>off retail</small></span>
+        <span class="net">$2.59 / sq ft</span>
+        <span class="dep">Optional $5,000 deposit unlocks this tier, applied to future purchases</span>
+      </div>
+      <div class="tier-card top">
+        <span class="range">Annual purchases $200,001+</span>
+        <span class="off">40%<small>off retail</small></span>
+        <span class="net">$2.39 / sq ft</span>
+        <span class="dep">Optional $15,000 deposit unlocks this tier, applied to future purchases</span>
+      </div>
+    </div>
+    <div class="pro-foot">
+      <div>
+        <p class="eyebrow" style="margin-bottom:14px">Our commitment to contractors</p>
+        <ul class="commit">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></svg>Transparent pricing, no surprises</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></svg>Fast loading &amp; same-day delivery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></svg>Always in-stock inventory</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></svg>Consistent quality, no mixed batches</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></svg>We don't compete with your business for retail jobs</li>
+        </ul>
+      </div>
+      <div class="verify">
+        <p>Bring your Hawaiʻi contractor license so we can verify it with DCCA. Deposits are optional, never required to buy, and are applied to your future purchases.</p>
+        <a class="btn btn-rust" href="#estimate" style="justify-self:start">Open a contractor account</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Remodeling &amp; installation</p>
+      <h2>From one room to the whole house</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-item">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 24h26M3 19h26M9 19v5M17 14v5M23 19v5M3 14h26"/></svg>
+        <h3>Flooring install</h3>
+        <p>LVP and SPC over concrete slab or plywood, with leveling, moisture barrier, trim and stair nosing.</p>
+        <span class="from">$3 / sq ft installation labor</span>
+      </div>
+      <div class="svc-item">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="24" height="22" rx="1"/><path d="M4 14h24M16 5v22M12 9.5h1M19 9.5h1M12 19h1M19 19h1"/></svg>
+        <h3>Cabinets &amp; countertops</h3>
+        <p>Kitchen and bath cabinets plus countertops from our showroom, installed level and square the first time.</p>
+        <span class="from">Design visit included</span>
+      </div>
+      <div class="svc-item">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17h24v3a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6v-3zM8 17V7a3 3 0 0 1 6 0M9 26l-1 3M23 26l1 3"/></svg>
+        <h3>Tile &amp; bathrooms</h3>
+        <p>Tub-to-shower conversions, vanities, waterproof floors and tile. Built for Hawaiʻi humidity.</p>
+        <span class="from">Written quote in 48 hours</span>
+      </div>
+      <div class="svc-item">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 15 16 5l12 10M7 13v14h18V13M13 27v-8h6v8"/></svg>
+        <h3>Whole-home remodel</h3>
+        <p>Condos, rentals and single-family homes. Permits, scheduling and cleanup handled for you.</p>
+        <span class="from">Licensed &amp; insured in Hawaiʻi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How a remodel works with us</p>
+      <h2>Four steps, no guesswork</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Visit the showroom</h3><p>Walk the sample wall, take planks home, compare them in your own light.</p><span class="when">Walk-ins welcome</span></li>
+      <li><h3>Free measure</h3><p>We come to you, check the subfloor and take exact measurements at no cost.</p><span class="when">Within 3 business days</span></li>
+      <li><h3>Written estimate</h3><p>A full written estimate using our listed prices, with a fixed start date. No hidden fees.</p><span class="when">Within 48 hours</span></li>
+      <li><h3>Crew installs</h3><p>Our trained crew works to the schedule, cleans up daily, and an owner walks the finished job with you.</p><span class="when">2-year limited warranty</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CREW ============ -->
+<section class="crew" id="crew">
+  <div class="wrap">
+    <div class="crew-top">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Our team</p>
+        <h2>A family business with a full professional crew</h2>
+        <p class="lede">The owners run the company. A full-time team of installers, carpenters and a project manager runs your job. Everyone on site works for us and is trained on the products we sell.</p>
+      </div>
+      <div class="crew-stats">
+        <div><strong>12+</strong><span>full-time crew members</span></div>
+        <div><strong>3</strong><span>install teams out daily</span></div>
+        <div><strong>0</strong><span>day-labor subcontractors</span></div>
+      </div>
+    </div>
+
+    <div class="roles">
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M9 11h6M9 15h4"/></svg></span>
+        <h3>Project manager</h3>
+        <p>Your single point of contact. Sets the schedule, orders materials and sends progress photos by text.</p>
+        <span class="n">1 per job</span>
+      </div>
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18h18M3 14h18M8 14v4M14 10v4M3 10h18"/></svg></span>
+        <h3>Flooring installers</h3>
+        <p>Subfloor prep, leveling, click-lock or glue-down install, clean transitions and stair nosing.</p>
+        <span class="n">Trained on SPC &amp; LVP</span>
+      </div>
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 11h18M12 4v16"/></svg></span>
+        <h3>Finish carpenters</h3>
+        <p>Cabinets, baseboards, doors and trim, installed level and square the first time.</p>
+        <span class="n">Cabinets &amp; millwork</span>
+      </div>
+      <div class="role">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>
+        <h3>Tile &amp; bath specialists</h3>
+        <p>Waterproofing, shower pans, tile and vanities, built for Hawaiʻi humidity.</p>
+        <span class="n">Wet areas</span>
+      </div>
+    </div>
+
+    <div class="promise">
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Start date in writing</b><span>You know the day we arrive and the day we finish before you sign.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Materials already in stock</b><span>No waiting on shipping to the islands. Your floor comes from our warehouse.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Daily cleanup &amp; progress photos</b><span>Your home stays livable, and you see progress even when you're at work.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5 9-10"/></svg><div><b>Owner walkthrough</b><span>One of the owners checks the finished work with you before final payment.</span></div></li>
+      </ul>
+      <div class="timeline">
+        <h3>A typical condo floor, start to finish</h3>
+        <p class="sub">2-bedroom condo · about 800 sq ft · SPC flooring</p>
+        <div class="tl-row"><b>Day 1</b><span class="tl-bar" style="background:#E2B97F">Remove old floor · level &amp; prep subfloor</span></div>
+        <div class="tl-row"><b>Day 2</b><span class="tl-bar" style="background:#EDA877">Install planks · transitions</span></div>
+        <div class="tl-row"><b>Day 3</b><span class="tl-bar" style="background:#B9D1AA;width:70%">Baseboards · cleanup · walkthrough</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Recent work on Oʻahu</p>
+      <h2>Finished projects</h2>
+    </div>
+    <div class="proj">
+      <div class="shot tall room w-natural" style="--wall:#E7E3DB"><div class="cap"><b>Kakaʻako condo</b>1,100 sq ft · SPC Natural Oak</div></div>
+      <div class="shot room w-greige" style="--wall:#D9DCD8"><div class="cap"><b>Kaimukī rental</b>LVP + new baseboards</div></div>
+      <div class="shot room w-walnut" style="--wall:#EDE9E1"><div class="cap"><b>Mānoa kitchen</b>Cabinets + flooring</div></div>
+      <div class="shot room w-drift" style="--wall:#E3E6E2"><div class="cap"><b>ʻEwa Beach home</b>Whole first floor</div></div>
+      <div class="shot room w-honey" style="--wall:#EFEAE0"><div class="cap"><b>Pearl City bath</b>Tub-to-shower</div></div>
+    </div>
+    <p class="proj-note">Swap each tile for real before / after photos from the Google Business profile. Project names are examples.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="duo" aria-label="Photo placeholder for the owners">
+      <svg viewBox="0 0 120 100" fill="currentColor" aria-hidden="true"><circle cx="42" cy="30" r="14"/><circle cx="80" cy="34" r="12"/><path d="M16 96c0-20 12-38 26-38s26 18 26 38zM58 96c2-18 10-32 22-32s24 14 24 32z"/></svg>
+      <p class="ph">Owners + crew photo · in front of the sample wall</p>
+    </div>
+    <div>
+      <p class="eyebrow">Locally owned · Honolulu</p>
+      <h2 style="margin-top:14px">Started by a husband and wife. Built into a team.</h2>
+      <p class="lede" style="margin-top:18px">Husband &amp; Wife Construction started with one truck and a wall of flooring samples. Today it's a flooring warehouse and a professional crew serving homes across Oʻahu. We still review every quote and stand behind every job.</p>
+      <blockquote>“You get the care of a family business and the speed of a full crew.”</blockquote>
+      <p class="sig">— [Owner names] <span class="ph-note">placeholder</span></p>
+      <div class="vals">
+        <div><b>Owners involved</b>Every quote reviewed, every job walked.</div>
+        <div><b>Pros on site</b>A trained, full-time crew, not day labor.</div>
+        <div><b>Built for the islands</b>Waterproof, termite-proof, humidity-stable materials.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT / ESTIMATE ============ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Showroom &amp; warehouse</p>
+      <h2 style="margin-top:14px">Come see the sample wall</h2>
+      <p class="lede" style="margin-top:18px">In-store shopping, in-store pickup and white-glove delivery. Bring a room photo and your measurements and we'll help you pick.</p>
+      <dl class="hours" id="hours">
+        <dt data-d="1">Mon – Fri</dt><dd data-d="1">7:30 AM – 5:30 PM</dd>
+        <dt data-d="6">Saturday</dt><dd data-d="6">7:30 AM – 5:30 PM</dd>
+        <dt data-d="0">Sunday</dt><dd data-d="0">Closed</dd>
+      </dl>
+      <div class="contact">
+        <div class="row"><span>Phone / text</span><b>(808) 766-0425</b></div>
+        <div class="row"><span>Address</span><b>619 Mapunapuna St, Honolulu, HI 96819</b></div>
+        <div class="row"><span>Directions</span><a href="https://www.google.com/maps/search/?api=1&amp;query=619+Mapunapuna+St+Honolulu+HI+96819" target="_blank" rel="noopener" style="color:var(--oak)">Open in Google Maps →</a></div>
+        <div class="row"><span>We accept</span><b>Credit cards · Zelle · Venmo</b></div>
+        <div class="row"><span>Accessibility</span><b>ASL proficient staff</b></div>
+      </div>
+    </div>
+
+    <form class="form" id="estimate" novalidate>
+      <div>
+        <p class="eyebrow">Free, no obligation</p>
+        <h3 style="margin-top:8px">Request an estimate</h3>
+      </div>
+      <fieldset style="border:0;padding:0;margin:0;display:grid;gap:8px">
+        <legend class="eyebrow" style="margin-bottom:8px">What's the project?</legend>
+        <div class="seg">
+          <input type="radio" name="type" id="t1" value="flooring" checked><label for="t1">Flooring install</label>
+          <input type="radio" name="type" id="t2" value="kitchen"><label for="t2">Kitchen</label>
+          <input type="radio" name="type" id="t3" value="bath"><label for="t3">Bathroom</label>
+          <input type="radio" name="type" id="t4" value="whole"><label for="t4">Whole home</label>
+          <input type="radio" name="type" id="t5" value="material"><label for="t5">Material only</label>
+          <input type="radio" name="type" id="t6" value="contractor"><label for="t6">Contractor account</label>
+        </div>
+      </fieldset>
+      <div class="two">
+        <label for="f-name">Name<input id="f-name" autocomplete="name" required></label>
+        <label for="f-phone">Phone<input id="f-phone" type="tel" autocomplete="tel" required></label>
+      </div>
+      <div class="two">
+        <label for="f-area">Neighborhood<input id="f-area" placeholder="e.g. Kaimukī"></label>
+        <label for="f-size">Approx. sq ft<input id="f-size" type="number" min="0" placeholder="e.g. 600"></label>
+      </div>
+      <label for="f-msg">Tell us about it<textarea id="f-msg" placeholder="Condo, 2 bedrooms, replacing old carpet…"></textarea></label>
+      <button class="btn btn-rust" type="submit" style="justify-content:center">Send request</button>
+      <p class="ok" id="f-ok" hidden></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Husband &amp; Wife Construction LLC · 619 Mapunapuna St, Honolulu, HI 96819 · (808) 766-0425</span>
+    <span>HI Contractor Lic. # [C-XXXXX] · Licensed &amp; insured</span>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a href="tel:+18087660425"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a href="sms:+18087660425"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=619+Mapunapuna+St+Honolulu+HI+96819" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 21 12l-9 10L3 12z"/><path d="M9 13v-2h5V9l3 2.5L14 14v-2"/></svg>Directions</a>
+  <a class="hot" href="#estimate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>Estimate</a>
+</nav>
+
+<script>
+// Sample catalog – replace with real SKUs, prices and stock counts
+const products = [
+  {id:"oak",   name:"Makai Natural Oak", line:"SPC rigid core", t:"spc", tone:"light", w:"w-natural", size:'7" × 48"', thick:"6.5 mm", wear:"20 mil", box:23.64, price:3.99, stock:1240, badge:"Best seller"},
+  {id:"ash",   name:"Kailua Whitewash",  line:"SPC rigid core", t:"spc", tone:"light", w:"w-ash",     size:'9" × 60"', thick:"7 mm",   wear:"22 mil", box:22.48, price:3.99, stock:860},
+  {id:"greige",name:"Diamond Head Greige",line:"SPC rigid core",t:"spc", tone:"light", w:"w-greige",  size:'7" × 48"', thick:"6.5 mm", wear:"20 mil", box:23.64, price:3.99, stock:2100, badge:"Rental pick"},
+  {id:"koa",   name:"Island Koa",        line:"SPC rigid core", t:"spc", tone:"dark",  w:"w-koa",     size:'9" × 60"', thick:"8 mm",   wear:"22 mil", box:22.48, price:3.99, stock:140},
+  {id:"honey", name:"Honey Hickory",     line:"Glue-down LVP",  t:"lvp", tone:"light", w:"w-honey",   size:'6" × 36"', thick:"3 mm",   wear:"12 mil", box:36.00, price:3.99, stock:1800},
+  {id:"drift", name:"Driftwood Linen",   line:"Glue-down LVP",  t:"lvp", tone:"light", w:"w-drift",   size:'6" × 36"', thick:"3 mm",   wear:"12 mil", box:36.00, price:3.99, stock:950},
+  {id:"smoke", name:"Lava Smoke Oak",    line:"SPC rigid core", t:"spc", tone:"dark",  w:"w-smoke",   size:'7" × 48"', thick:"6.5 mm", wear:"20 mil", box:23.64, price:3.99, stock:620},
+  {id:"walnut",name:"Mānoa Walnut",      line:"Glue-down LVP",  t:"lvp", tone:"dark",  w:"w-walnut",  size:'7" × 48"', thick:"5 mm",   wear:"20 mil", box:30.00, price:3.99, stock:310},
+];
+const fmt = n => n.toLocaleString("en-US");
+const usd = n => n.toLocaleString("en-US",{style:"currency",currency:"USD"});
+const grid = document.getElementById("grid");
+let disc = 0, filt = "all";
+
+function render(){
+  const filter = filt;
+  grid.innerHTML = products.filter(p => filter==="all" || p.t===filter || p.tone===filter).map(p => `
+    <article class="prod">
+      <div class="sw wood ${p.w}">${p.badge ? `<span class="badge">${p.badge}</span>` : ""}</div>
+      <div class="body">
+        <span class="line">${p.line}</span>
+        <h4>${p.name}</h4>
+        <dl class="specs">
+          <dt>Plank</dt><dd>${p.size}</dd>
+          <dt>Thickness</dt><dd>${p.thick}</dd>
+          <dt>Wear layer</dt><dd>${p.wear}</dd>
+          <dt>Per box</dt><dd>${p.box} sq ft</dd>
+        </dl>
+      </div>
+      <div class="foot">
+        <span class="price">$${(p.price*(1-disc)).toFixed(2)}<small>/sq ft</small>${disc?`<s>$${p.price.toFixed(2)}</s>`:""}</span>
+        <span class="stock ${p.stock<300?"low":""}">${p.stock<300?"Low stock":"In stock"}<br>${fmt(p.stock)} sq ft</span>
+      </div>
+    </article>`).join("");
+}
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x===c));
+  filt = c.dataset.f; render();
+}));
+document.querySelectorAll(".tier button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".tier button").forEach(x => x.setAttribute("aria-pressed", x===b));
+  disc = parseFloat(b.dataset.d); render(); calc();
+}));
+render();
+
+// Coverage calculator
+const sel = document.getElementById("c-prod");
+sel.innerHTML = products.map(p => `<option value="${p.id}">${p.name} (${p.box} sq ft/box)</option>`).join("");
+function calc(){
+  const p = products.find(x => x.id===sel.value);
+  const L = parseFloat(document.getElementById("c-len").value)||0;
+  const W = parseFloat(document.getElementById("c-wid").value)||0;
+  const waste = parseFloat(document.getElementById("c-waste").value);
+  const area = L*W, need = area*(1+waste), boxes = Math.ceil(need/p.box), cov = boxes*p.box;
+  const rate = p.price*(1-disc), material = cov*rate;
+  const lines = [[`Flooring · ${boxes} boxes (${cov.toFixed(1)} sq ft)`, material]];
+  const labels = {"x-inst":"Installation","x-demo":"Remove old floor","x-level":"Leveling labor","x-base":"Baseboards","x-trash":"Trash disposal · 1 trip"};
+  document.querySelectorAll(".checks input").forEach(i => {
+    if(!i.checked) return;
+    lines.push([labels[i.id], i.dataset.trip ? +i.dataset.trip : area*(+i.dataset.rate)]);
+  });
+  const total = lines.reduce((a,l) => a+l[1], 0);
+  document.getElementById("c-total").textContent = area ? usd(Math.round(total)).replace(".00","") : "–";
+  document.getElementById("c-lines").innerHTML =
+    `<dt>Room area</dt><dd>${fmt(Math.round(area))} sq ft</dd>` +
+    lines.map(l => `<dt>${l[0]}</dt><dd>${usd(l[1])}</dd>`).join("") +
+    (document.getElementById("x-level").checked ? `<dt>Leveling material</dt><dd>at cost</dd>` : "") +
+    `<dt class="total">Total${disc?` · ${Math.round(disc*100)}% contractor`:""}</dt><dd class="total">${usd(total)}</dd>`;
+}
+document.getElementById("calcForm").addEventListener("input", calc);
+document.getElementById("calcForm").addEventListener("submit", e => e.preventDefault());
+calc();
+
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn"), menu = document.getElementById("mobileMenu");
+menuBtn.addEventListener("click", () => {
+  const open = menu.hidden; menu.hidden = !open; menuBtn.setAttribute("aria-expanded", open);
+});
+menu.addEventListener("click", e => { if(e.target.tagName==="A"){ menu.hidden = true; menuBtn.setAttribute("aria-expanded", false); } });
+
+// Highlight today's hours
+const d = new Date().getDay(), key = d===0 ? "0" : d===6 ? "6" : "1";
+document.querySelectorAll(`#hours [data-d="${key}"]`).forEach(el => el.classList.add("today"));
+
+// Open / closed now, in Hawaiʻi time
+try{
+  const hst = new Date(new Date().toLocaleString("en-US",{timeZone:"Pacific/Honolulu"}));
+  const mins = hst.getHours()*60 + hst.getMinutes(), open = hst.getDay()!==0 && mins>=450 && mins<1050;
+  const el = document.getElementById("openNow");
+  el.textContent = open ? "Open now · until 5:30 PM" : "Closed now · Opens Mon – Sat 7:30 AM";
+  if(!open) el.style.color = "var(--oak)";
+}catch(e){}
+
+// Estimate form (front-end only – wire to email/CRM when building for real)
+document.getElementById("estimate").addEventListener("submit", e => {
+  e.preventDefault();
+  const name = document.getElementById("f-name"), phone = document.getElementById("f-phone"), ok = document.getElementById("f-ok");
+  ok.hidden = false;
+  if(!name.value.trim() || !phone.value.trim()){
+    ok.style.color = "#B3261E";
+    ok.textContent = "Add your name and phone number so we can call you back.";
+    (name.value.trim() ? phone : name).focus();
+    return;
+  }
+  ok.style.color = "";
+  ok.textContent = `Mahalo, ${name.value.trim()}. This is a design preview, so nothing was sent yet.`;
+});
+</script>
+</body>
+</html>
