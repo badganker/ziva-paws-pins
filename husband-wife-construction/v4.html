@@ -19,7 +19,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
 <style>
 /* ============ Design tokens · Draft 4 "Gallery" ============
    Pure white, black type, hairlines. The wood is the only color.
@@ -42,7 +42,7 @@
   --reef:#96683A;
   --ok:#4E7A55;
   --shadow:none;
-  --display:"Jost","Futura","Century Gothic","Avenir Next",sans-serif;
+  --display:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
   --body:"Jost","Futura","Avenir Next",system-ui,sans-serif;
   --mono:"Jost","Futura","Avenir Next",system-ui,sans-serif;
   --r:0px;
@@ -475,6 +475,53 @@ footer{padding-top:0}
 .seg input:checked + label{background:var(--basalt);color:var(--on-basalt);border-color:var(--basalt)}
 .prod .sw{border-bottom:1px solid var(--line)}
 .strip .open{color:var(--ok)}
+/* ============ Type + hero refinement ============ */
+h1,h2{font-family:var(--display);font-weight:500;letter-spacing:-.015em;line-height:1}
+h2{font-size:clamp(2.4rem,5vw,4rem)}
+h3{font-family:var(--body);font-weight:400;letter-spacing:0}
+.sec-head h2 em,h2 em{font-style:italic;color:var(--accent-text)}
+.lede{font-weight:300;font-size:1.12rem;line-height:1.7;color:var(--ink-2)}
+body{font-weight:400;font-size:16px;line-height:1.65}
+.price,.calc .out .big,.tier-card .off,.ptable .amt,.crew-stats strong{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
+.price{font-size:1.7rem}
+.ptable .amt{font-size:1.55rem}
+.logo b{font-family:var(--body);font-weight:500}
+
+.hero{padding-block:clamp(40px,6vw,88px) clamp(56px,8vw,112px)}
+.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(32px,6vw,96px);align-items:center}
+.hero-copy{display:grid;gap:0}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(3rem,5.6vw,5.4rem);line-height:.95;letter-spacing:-.025em;margin-top:22px;display:grid}
+.hero h1 span{display:block;white-space:nowrap;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span:nth-child(2){animation-delay:.08s}
+.hero h1 span:nth-child(3){animation-delay:.16s}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--accent-text)}
+@keyframes rise{from{transform:translateY(14px);opacity:.001}to{transform:none;opacity:1}}
+.hero .lede{margin-top:28px;max-width:40ch}
+.hero .ctas{margin-top:36px}
+.hero .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin:40px 0 0;padding:0;border:0}
+.hero .facts div{padding:0 28px;border-left:1px solid var(--line);font:inherit;letter-spacing:0;text-transform:none}
+.hero .facts div:first-child{padding-left:0;border-left:0}
+.hero .facts dt{font:500 .68rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.hero .facts dd{margin:0;font:500 2.3rem/1 var(--display);letter-spacing:-.01em;color:var(--ink)}
+.hero .facts small{font:400 .78rem var(--body);letter-spacing:.04em;color:var(--ink-3);margin-left:6px}
+.hero-fig{margin:0;display:grid;gap:14px}
+.hero-fig .wall{aspect-ratio:1/1;padding:12% 9% 0}
+.hero-fig .planks{height:66%;gap:3%}
+.hero-fig .plank{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.hero-fig .plank:hover{transform:translateY(-10px)}
+.hero-fig .wall .banner{font-family:var(--display);font-weight:500;font-style:italic;text-transform:none;letter-spacing:.02em;font-size:clamp(1.3rem,2.4vw,1.9rem);padding:.4em 1.2em}
+.hero-fig .wall .banner span{font-family:var(--body);font-style:normal;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;margin-top:8px}
+.hero-fig figcaption{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:500 .68rem/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);padding-top:12px;border-top:1px solid var(--line)}
+.hero-fig figcaption span:first-child{color:var(--ink)}
+@media (max-width:880px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-fig .wall{aspect-ratio:5/4}
+}
+@media (max-width:520px){
+  .hero .facts div{padding:0 16px}
+  .hero .facts dd{font-size:1.8rem}
+  .hero .facts small{display:block;margin:4px 0 0}
+}
 </style>
 </head>
 <body>
@@ -516,36 +563,39 @@ footer{padding-top:0}
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap">
-    <div>
-      <p class="eyebrow">Flooring wholesale &amp; retail + remodeling · Māpunapuna, Honolulu</p>
-      <h1 style="margin-top:16px">Family-owned.<br><em>Crew-built.</em><br>Done on time.</h1>
-      <p class="lede">Waterproof LVP and SPC flooring in stock for same-day pickup or delivery. When you need it installed, our full-time crew of trained installers and carpenters gets it done right and on schedule, with the owners checking every job.</p>
+    <div class="hero-copy">
+      <p class="eyebrow">H&amp;W Flooring · Māpunapuna, Honolulu</p>
+      <h1><span>Family-owned.</span><span><em>Crew-built.</em></span><span>Done on time.</span></h1>
+      <p class="lede">Flooring in stock for same-day pickup or delivery, installed by our own full-time crew. The owners check every job.</p>
       <div class="ctas">
-        <a class="btn btn-rust" href="#flooring">Shop in-stock flooring
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-line" href="#estimate">Get a remodel quote</a>
+        <a class="btn btn-rust" href="#flooring">Shop flooring
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#estimate">Free estimate</a>
       </div>
-      <div class="facts">
-        <div><strong>$3.99</strong>/ sq ft retail flooring</div>
-        <div><strong>$3</strong>/ sq ft installation</div>
-        <div><strong>2-year</strong>install warranty</div>
-      </div>
+      <dl class="facts">
+        <div><dt>Flooring</dt><dd>$3.99<small>/ sq ft</small></dd></div>
+        <div><dt>Installation</dt><dd>$3<small>/ sq ft</small></dd></div>
+        <div><dt>Warranty</dt><dd>2<small>years</small></dd></div>
+      </dl>
     </div>
 
-    <div class="wall" role="img" aria-label="Plank samples hanging on the rust-red container wall outside the showroom, under a banner reading Flooring To Go, Same Day Delivery">
-      <div class="banner">Flooring to go<span>Same day delivery</span></div>
-      <div class="planks">
-        <div class="plank wood w-ash"></div>
-        <div class="plank wood w-natural"></div>
-        <div class="plank wood w-drift"></div>
-        <div class="plank wood w-honey"></div>
-        <div class="plank wood w-greige"></div>
-        <div class="plank wood w-koa"></div>
-        <div class="plank wood w-smoke"></div>
-        <div class="plank wood w-walnut"></div>
+    <figure class="hero-fig">
+      <div class="wall" role="img" aria-label="Eight flooring plank samples displayed on the showroom wall, from pale ash to dark walnut">
+        <div class="banner">Flooring to go<span>Same day delivery</span></div>
+        <div class="planks">
+          <div class="plank wood w-ash" title="Kailua Whitewash"></div>
+          <div class="plank wood w-natural" title="Makai Natural Oak"></div>
+          <div class="plank wood w-drift" title="Driftwood Linen"></div>
+          <div class="plank wood w-honey" title="Honey Hickory"></div>
+          <div class="plank wood w-greige" title="Diamond Head Greige"></div>
+          <div class="plank wood w-koa" title="Island Koa"></div>
+          <div class="plank wood w-smoke" title="Lava Smoke Oak"></div>
+          <div class="plank wood w-walnut" title="Mānoa Walnut"></div>
+        </div>
+        <span class="tag">Replace with showroom photo</span>
       </div>
-      <span class="tag">Replace with storefront photo</span>
-    </div>
+      <figcaption><span>The sample wall</span><span>8 styles in stock · 619 Mapunapuna St</span></figcaption>
+    </figure>
   </div>
 </section>
 
